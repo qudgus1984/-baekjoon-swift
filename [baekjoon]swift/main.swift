@@ -165,6 +165,7 @@ else {
 
 // 백준 알고리즘 2525
 
+/*
 let input = readLine()!
 let time = input.split(separator: " ")
 var H = Int(time[0])! // 현재 시
@@ -179,3 +180,35 @@ if allTime >= 1440 {
 else {
     print(allTime/60, allTime % 60)
 }
+*/
+
+// 백준 알고리즘 2480
+
+let input = readLine()!
+let dice = input.split(separator: " ")
+var x = Int(dice[0])!
+var y = Int(dice[1])!
+var z = Int(dice[2])!
+
+if x == y && y == z && x == z { // 눈금의 수가 전부 같은 경우
+    print(10000 + x * 1000)
+}
+else if x == y || x == z { // 눈금의 수가 두개만 같은경우
+    print(1000 + x * 100)
+}
+else if y == z {
+    print(1000 + z * 100)
+}
+else if x != y && y != z && x != z {
+    if x > y && x > z{ // x가 최댓값인 경우
+        print(x*100)
+    }
+    else if y > x && y > z { // y가 최댓값인 경우
+        print(y*100)
+    }
+    else if z > x && z > y { // y가 최댓값인 경우
+        print(z*100)
+    }
+}
+
+
