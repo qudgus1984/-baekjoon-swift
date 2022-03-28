@@ -55,3 +55,20 @@ print(a*b)
  print(value)
  */
 
+// 백준 알고리즘 1330
+
+let input = readLine()!
+let arr = input.split(separator:" ")
+let a = Int(arr[0])!
+let b = Int(arr[1])!
+if a > b {
+    print(">")
+}
+else if a < b {
+    print("<")
+}
+else {
+    print("==")
+}
+
+
