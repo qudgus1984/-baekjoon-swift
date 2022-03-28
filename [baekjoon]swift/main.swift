@@ -139,4 +139,24 @@ else {
 }
 */
 
+// 백준 알고리즘 2884
 
+let input = readLine()!
+let time = input.split(separator: " ")
+var H = Int(time[0])!
+var M = Int(time[1])!
+
+
+if H >= 0 && M >= 45 {
+    print(H,(M - 45))
+}
+else if H >= 1 && M < 45 {
+    print((H - 1),(M + 15))
+}
+else if H == 0 && M < 45 {
+    H = 23
+    print(H,(M + 15))
+}
+else {
+    print("입력이 잘못되었습니다.")
+}
