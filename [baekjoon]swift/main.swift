@@ -141,6 +141,7 @@ else {
 
 // 백준 알고리즘 2884
 
+/*
 let input = readLine()!
 let time = input.split(separator: " ")
 var H = Int(time[0])!
@@ -159,4 +160,22 @@ else if H == 0 && M < 45 {
 }
 else {
     print("입력이 잘못되었습니다.")
+}
+*/
+
+// 백준 알고리즘 2525
+
+let input = readLine()!
+let time = input.split(separator: " ")
+var H = Int(time[0])! // 현재 시
+var M = Int(time[1])! // 현재 분
+let C = Int(readLine()!)! // 오븐 굽는데 걸리는 시간 분
+
+var minH = H * 60 // 현재 시간 * 60 단위를 분으로
+var allTime = minH + M + C // 현재시간에서 요리한 시간을 더해준 값. 요리 다하고 난 뒤의 시간
+if allTime >= 1440 {
+    print((allTime/60 - 24), allTime % 60 )
+}
+else {
+    print(allTime/60, allTime % 60)
 }
