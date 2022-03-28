@@ -8,9 +8,9 @@
 import Foundation
 
 // 백준 알고리즘 2557
-print("Hello World!")
+//rint("Hello World!")
 
 // 백준 알고리즘 1000
-print("강한친구 대한육군")
-print("강한친구 대한육군")
+//print("강한친구 대한육군")
+//print("강한친구 대한육군")
 
