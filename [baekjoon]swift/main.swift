@@ -219,7 +219,21 @@ else if x != y && y != z && x != z {
 
 // 백준 알고리즘 2739
 
+/*
 let N = Int(readLine()!)!
 for i in 1...9 {
     print("\(N) * \(i) = \(N*i)")
 }
+ */
+
+// 백준 알고리즘 10950
+
+let T = Int(readLine()!)!
+let input = readLine()!
+var value = input.split(separator: " ")
+var A = Int(value[0])!
+var B = Int(value[1])!
+for i in 1...T {
+    print(A+B)
+}
+
