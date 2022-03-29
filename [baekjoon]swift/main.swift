@@ -184,6 +184,7 @@ else {
 
 // 백준 알고리즘 2480
 
+/*
 let input = readLine()!
 let dice = input.split(separator: " ")
 var x = Int(dice[0])!
@@ -210,5 +211,15 @@ else if x != y && y != z && x != z {
         print(z*100)
     }
 }
+*/
 
+//###########################################
 
+// 반복문
+
+// 백준 알고리즘 2739
+
+let N = Int(readLine()!)!
+for i in 1...9 {
+    print("\(N) * \(i) = \(N*i)")
+}
