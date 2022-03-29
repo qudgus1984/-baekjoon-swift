@@ -227,7 +227,7 @@ for i in 1...9 {
  */
 
 // 백준 알고리즘 10950
-
+/*
 let T = Int(readLine()!)!
 let input = readLine()!
 var value = input.split(separator: " ")
@@ -236,4 +236,15 @@ var B = Int(value[1])!
 for i in 1...T {
     print(A+B)
 }
+ */
+
+// 백준 알고리즘 8393
+
+let n = Int(readLine()!)!
+var total = 0
+for i in 1...n {
+    total = total + i
+}
+print(total)
+        
 
