@@ -273,6 +273,7 @@ for i in 1...N {
 
 // 백준 알고리즘 11021
 
+/*
 let T = Int(readLine()!)!
 var x = 0
 for i in 1...T {
@@ -283,5 +284,17 @@ for i in 1...T {
     x = x + 1
     print("Case #\(x): \(A+B)")
 }
+*/
 
+// 백준 알고리즘 11022
 
+let T = Int(readLine()!)!
+var x = 0
+for i in 1...T {
+    let input = readLine()!
+    var total = input.split(separator: " ")
+    var A = Int(total[0])!
+    var B = Int(total[1])!
+    x = x + 1
+    print("Case #\(x): \(A) + \(B) = \(A+B)")
+}
