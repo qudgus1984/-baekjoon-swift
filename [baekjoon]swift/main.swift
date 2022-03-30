@@ -251,10 +251,37 @@ print(total)
 
 // 백준 알고리즘 2741
 
+/*
 let N = Int(readLine()!)!
 var x = 1
 for i in 1...N {
     print(x)
     x = x + 1
 }
+*/
+
+// 백준 알고리즘 2742
+
+/*
+let N = Int(readLine()!)!
+var X = N
+for i in 1...N {
+    print(X)
+    X = X - 1
+}
+*/
+
+// 백준 알고리즘 11021
+
+let T = Int(readLine()!)!
+var x = 0
+for i in 1...T {
+    let input = readLine()!
+    var total = input.split(separator: " ")
+    var A = Int(total[0])!
+    var B = Int(total[1])!
+    x = x + 1
+    print("Case #\(x): \(A+B)")
+}
+
 
