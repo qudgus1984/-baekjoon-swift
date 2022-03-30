@@ -288,6 +288,7 @@ for i in 1...T {
 
 // 백준 알고리즘 11022
 
+/*
 let T = Int(readLine()!)!
 var x = 0
 for i in 1...T {
@@ -297,4 +298,30 @@ for i in 1...T {
     var B = Int(total[1])!
     x = x + 1
     print("Case #\(x): \(A) + \(B) = \(A+B)")
+}
+*/
+
+// 백준 알고리즘 2438
+/*
+let N = Int(readLine()!)!
+var star: String = "*"
+for i in 1...N{
+    print(star)
+    star = star + "*"
+}
+ */
+
+// 백준 알고리즘 2439
+
+let N = Int(readLine()!)!
+for i in 1...N{
+    var total = ""
+    for j in 1...N {
+        if j <= N - i {
+            total += " "
+        } else{
+            total += "*"
+        }
+    }
+    print(total)
 }
