@@ -240,11 +240,21 @@ for i in 1...T {
 
 // 백준 알고리즘 8393
 
+/*
 let n = Int(readLine()!)!
 var total = 0
 for i in 1...n {
     total = total + i
 }
 print(total)
-        
+*/
+
+// 백준 알고리즘 2741
+
+let N = Int(readLine()!)!
+var x = 1
+for i in 1...N {
+    print(x)
+    x = x + 1
+}
 
