@@ -329,7 +329,7 @@ for i in 1...N{
 */
 
 // 백준 알고리즘 10871
-
+/*
 import Foundation
 
 let X = readLine()!.components(separatedBy: " ")
@@ -339,4 +339,19 @@ for i in N {
         print(i, terminator: " ")
     }
 }
+*/
+
+// 백준 알고리즘 10952
+
+let input = readLine()!
+var total = input.split(separator: " ")
+var A = Int(total[0])!
+var B = Int(total[1])!
+while true {
+    if A&B == 0{
+        break
+    }
+    print(A+B)
+}
+
 
