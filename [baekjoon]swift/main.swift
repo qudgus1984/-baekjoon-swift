@@ -313,6 +313,7 @@ for i in 1...N{
 
 // 백준 알고리즘 2439
 
+/*
 let N = Int(readLine()!)!
 for i in 1...N{
     var total = ""
@@ -324,4 +325,15 @@ for i in 1...N{
         }
     }
     print(total)
+}
+*/
+
+// 백준 알고리즘 10871
+
+let input1 = readLine()!.components(separatedBy: " ")
+let input2 = readLine()!.components(separatedBy: " ")
+for i in input2 {
+    if Int(i)! < Int(input1[1])! {
+        print(i, terminator: " ")
+    }
 }
