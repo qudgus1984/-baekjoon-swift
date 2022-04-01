@@ -330,10 +330,13 @@ for i in 1...N{
 
 // 백준 알고리즘 10871
 
-let input1 = readLine()!.components(separatedBy: " ")
-let input2 = readLine()!.components(separatedBy: " ")
-for i in input2 {
-    if Int(i)! < Int(input1[1])! {
+import Foundation
+
+let X = readLine()!.components(separatedBy: " ")
+let N = readLine()!.components(separatedBy: " ")
+for i in N {
+    if Int(i)! < Int(X[1])! {
         print(i, terminator: " ")
     }
 }
+
