@@ -341,17 +341,12 @@ for i in N {
 }
 */
 
-// 백준 알고리즘 10952
+// 백준 알고리즘 10952 미완료
 
-let input = readLine()!
-var total = input.split(separator: " ")
-var A = Int(total[0])!
-var B = Int(total[1])!
 while true {
-    if A&B == 0{
+    let input = readLine()!.components(separatedBy: " ")
+    if input[0] == "0" && input[1] == "0" {
         break
     }
-    print(A+B)
+    print(Int(input[0])! + Int(input[1])!)
 }
-
-
