@@ -341,12 +341,20 @@ for i in N {
 }
 */
 
-// 백준 알고리즘 10952 미완료
-
+// 백준 알고리즘 10952
+/*
 while true {
     let input = readLine()!.components(separatedBy: " ")
     if input[0] == "0" && input[1] == "0" {
         break
     }
     print(Int(input[0])! + Int(input[1])!)
+}
+ */
+
+// 백준 알고리즘 10951
+
+while true {
+    let input = readLine()!.components(separatedBy: " ")
+print(Int(input[0])! + Int(input[1])!)
 }
