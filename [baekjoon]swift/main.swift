@@ -390,8 +390,13 @@ while true {
 print(count)
 */
 
-// 백준 알고리즘 10818
+//###########################################################################
+// 백준 알고리즘 1차원 배열
+
+// 백준 알고리즘 10818 다시 풀어보기
 
 let count = readLine()!
 let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
+
+print("내가 다시 풀어볼 문제임!")
