@@ -400,3 +400,5 @@ let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
 
 print("내가 다시 풀어볼 문제임!")
+print("다시풀어서 여기서부터 내가 입력할 것")
+print("블로그 글도 안올림! 배열부터 시작임!!")
