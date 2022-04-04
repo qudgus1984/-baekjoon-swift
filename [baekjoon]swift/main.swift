@@ -365,7 +365,7 @@ while let input = readLine() {
 */
 
 // 백준 알고리즘 1110
-
+/*
 let N = Int(readLine()!)!
 var count = 0
 var num = N
@@ -388,4 +388,19 @@ while true {
 }
 
 print(count)
+*/
 
+// 백준 알고리즘 10818
+
+let N = Int(readLine()!)!
+for i in 1...N {
+    let input = readLine()!
+    let total = input.split(separator:" ")
+    var x = total[i]
+    if total[i] > total[i+1] {
+        var big = Int(total[i])
+    }
+    if total[i] < total[i+1] {
+        var small = Int(total[i])
+    }
+}
