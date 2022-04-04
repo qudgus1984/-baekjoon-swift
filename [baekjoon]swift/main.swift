@@ -392,15 +392,6 @@ print(count)
 
 // 백준 알고리즘 10818
 
-let N = Int(readLine()!)!
-for i in 1...N {
-    let input = readLine()!
-    let total = input.split(separator:" ")
-    var x = total[i]
-    if total[i] > total[i+1] {
-        var big = Int(total[i])
-    }
-    if total[i] < total[i+1] {
-        var small = Int(total[i])
-    }
-}
+let count = readLine()!
+let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
+print("\(nArray.min()!) \(nArray.max()!)")
