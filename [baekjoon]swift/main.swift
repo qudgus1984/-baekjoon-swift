@@ -343,6 +343,8 @@ for i in N {
 
 // 백준 알고리즘 10952
 /*
+import Foundation
+ 
 while true {
     let input = readLine()!.components(separatedBy: " ")
     if input[0] == "0" && input[1] == "0" {
@@ -353,8 +355,37 @@ while true {
  */
 
 // 백준 알고리즘 10951
+/*
+import Foundation
 
-while true {
-    let input = readLine()!.components(separatedBy: " ")
-print(Int(input[0])! + Int(input[1])!)
+while let input = readLine() {
+    let split = input.components(separatedBy: " ")
+    print(Int(split[0])! + Int(split[1])!)
 }
+*/
+
+// 백준 알고리즘 1110
+
+let N = Int(readLine()!)!
+var count = 0
+var num = N
+while true {
+    var nextNum = 0
+    let leftNum = num % 10
+    while num > 0 {
+            nextNum += num % 10
+            num /= 10
+    }
+
+    count += 1
+
+    let rightNum = nextNum % 10
+    nextNum = leftNum * 10 + rightNum
+
+    if nextNum == N {break}
+    
+    num = nextNum
+}
+
+print(count)
+
