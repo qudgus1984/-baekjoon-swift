@@ -399,14 +399,4 @@ let count = readLine()!
 let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
 
-print("내가 다시 풀어볼 문제임!")
-print("다시풀어서 여기서부터 내가 입력할 것")
-print("블로그 글도 안올림! 배열부터 시작임!!")
-print("&,map 함수에 대해 정리하고 블로그 글 올리기!")
-print("1일 1커밋")
-print("one day one commit")
-print("map 함수, separator 함수 공부하기")
-print("$이 무슨 뜻으로 쓰이는지 알기")
-print("문법 빨리 끝내고 공부하자")
-print("swift 프로그래밍 거의 완료")
-print("one comit")
+print("return")
