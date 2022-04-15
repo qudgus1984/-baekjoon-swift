@@ -400,3 +400,4 @@ let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
 
 print("return")
+print("commit")
