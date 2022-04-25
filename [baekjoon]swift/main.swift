@@ -395,10 +395,23 @@ print(count)
 
 // 백준 알고리즘 10818 다시 풀어보기
 
+/*
 let count = readLine()!
 let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
+*/
 
-print("commit")
-print("commit2")
-print("commit3")
+var num: [Int] = []
+
+for _ in 1...9 {
+    num.append(Int(readLine()!)!)
+}
+
+let maximum = num.max()!
+let indexOfMaximum = num.firstIndex(of: maximum)! + 1
+print("\(maximum)")
+print("\(indexOfMaximum)")
+
+
+
+
