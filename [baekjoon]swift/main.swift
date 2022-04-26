@@ -401,6 +401,8 @@ let nArray = readLine()!.split(separator: " ").map { Int(String($0))! }
 print("\(nArray.min()!) \(nArray.max()!)")
 */
 
+// 백준 알고리즘 2562
+/*
 var num: [Int] = []
 
 for _ in 1...9 {
@@ -411,6 +413,20 @@ let maximum = num.max()!
 let indexOfMaximum = num.firstIndex(of: maximum)! + 1
 print("\(maximum)")
 print("\(indexOfMaximum)")
+*/
+
+// 백준 알고리즘 2577
+var a = Int(readLine()!)
+var b = Int(readLine()!)
+var c = Int(readLine()!)
+var total: [Int] = []
+var count0 = 0
+
+
+
+
+
+
 
 
 
