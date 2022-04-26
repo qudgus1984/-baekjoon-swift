@@ -416,6 +416,7 @@ print("\(indexOfMaximum)")
 */
 
 // 백준 알고리즘 2577
+/*
 var a = Int(readLine()!)!
 var b = Int(readLine()!)!
 var c = Int(readLine()!)!
@@ -432,7 +433,15 @@ for i in 0...9 {
     let num = x.count
     print(num)
 }
+*/
 
+// 백준 알고리즘 3052
+
+var x = Set<Int>()
+for _ in 0...9 {
+    x.insert(Int(readLine()!)!%42)
+}
+print(x.count)
 
 
 
