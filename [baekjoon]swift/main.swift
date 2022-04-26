@@ -416,11 +416,23 @@ print("\(indexOfMaximum)")
 */
 
 // 백준 알고리즘 2577
-var a = Int(readLine()!)
-var b = Int(readLine()!)
-var c = Int(readLine()!)
-var total: [Int] = []
-var count0 = 0
+var a = Int(readLine()!)!
+var b = Int(readLine()!)!
+var c = Int(readLine()!)!
+
+var multipul = String(a * b * c)
+var arr: [Character] = []
+
+for i in multipul {
+    arr.append(i)
+}
+
+for i in 0...9 {
+    let x = arr.filter{Int(String($0))! == i}
+    let num = x.count
+    print(num)
+}
+
 
 
 
