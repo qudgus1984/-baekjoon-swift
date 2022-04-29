@@ -446,16 +446,19 @@ print(x.count)
 */
 
 // 백준 알고리즘 1546
-
+/*
 var sub = Int(readLine()!)!
 var x = readLine()!.split(separator: " ").map{Float(String($0))!}
 var arr : Float = 0
 
-for i in 0...sub {
-    arr += (x[i - 1] / x.max()! * 100)
+for i in 1...sub {
+    arr += (x[i-1] / x.max()! * 100)
 }
 print(arr/Float(sub))
+*/
 
+print("4/30")
+print("Allen 강의 시작")
 
 
 
