@@ -459,6 +459,7 @@ print(arr/Float(sub))
 
 print("4/30")
 print("Allen 강의 시작")
+print("오늘은일요일")
 
 
 
