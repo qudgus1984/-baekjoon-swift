@@ -457,10 +457,11 @@ for i in 1...sub {
 print(arr/Float(sub))
 */
 
-print("4/30")
-print("Allen 강의 시작")
-print("오늘은일요일")
-print("go to the 잠실 롯데월드")
+
+var study = "공부"
+var allen = "Allen 강의"
+var ing = "하는중"
+print("\(allen)\(study)\(ing)")
 
 
 
