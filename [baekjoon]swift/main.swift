@@ -458,11 +458,13 @@ print(arr/Float(sub))
 */
 
 
-var study = 3
+var study = "공부"
 var allen = "Allen 강의"
 var ing = "하는중"
+var daily = "매일"
 print("\(allen)\(study)\(ing)")
 print("\(allen)\(study)\(ing)")
+print("\(allen)\(daily)\(study)\(ing)")
 
 
 
