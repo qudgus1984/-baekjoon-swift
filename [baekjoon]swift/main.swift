@@ -465,7 +465,7 @@ var daily = "매일"
 print("\(allen)\(study)\(ing)")
 print("\(allen)\(study)\(ing)")
 print("\(allen)\(daily)\(study)\(ing)")
-
+print("12강까지 완료")
 
 
 
