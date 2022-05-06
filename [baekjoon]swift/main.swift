@@ -477,9 +477,18 @@ if emailTyping == email {
 // 백준 알고리즘 8958
 
 var t = Int(readLine()!)!
-var arr:Character
+var arr:[String] = []
+var i = 0
+var total = 0
+var o:Character = "O"
 for _ in(1...t) {
-    
+    var x = readLine()!
+    arr.append(x)
+    if arr[i] == arr[i+1] && Character(arr[i]) == o {
+        total += total
+        i += i
+        
+    }
 }
 
 
