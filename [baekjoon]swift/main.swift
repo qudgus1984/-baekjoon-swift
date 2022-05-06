@@ -475,7 +475,7 @@ if emailTyping == email {
  */
 
 // 백준 알고리즘 8958
-
+/*
 let count = Int(readLine()!)!
 for _ in 0 ..< count {
     let result = readLine()!.map { String ($0) }
@@ -491,7 +491,23 @@ for _ in 0 ..< count {
     }
     print(totalScore)
 }
+*/
 
+let t = Int(readLine()!)!
+for _ in 0 ..< t {
+    let result = readLine()!.map{String ($0)}
+    var score = 0
+    var totalScore = 0
+    for i in result {
+        if i == "O" {
+            score += 1
+            totalScore += score
+        } else {
+            score = 0
+        }
+    }
+    print(totalScore)
+}
 
 
 
