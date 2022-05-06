@@ -459,7 +459,7 @@ print(arr/Float(sub))
 
 
 // 이메일과 비밀번호 입력받고 맞는지 확인하기
-var email: String = "qudgus1984@naver.com"
+/* var email: String = "qudgus1984@naver.com"
 var passWord: String = "tkfkd0191!"
 var emailTyping: String = readLine()!
 var passWordTyping: String = readLine()!
@@ -472,6 +472,17 @@ if emailTyping == email {
 } else {
     print("이메일 혹은 비밀번호 오류")
 }
+ */
+
+// 백준 알고리즘 8958
+
+var t = Int(readLine()!)!
+var arr:Character
+for _ in(1...t) {
+    
+}
+
+
 
 
 
