@@ -476,19 +476,20 @@ if emailTyping == email {
 
 // 백준 알고리즘 8958
 
-var t = Int(readLine()!)!
-var arr:[String] = []
-var i = 0
-var total = 0
-var o:Character = "O"
-for _ in(1...t) {
-    var x = readLine()!
-    arr.append(x)
-    if arr[i] == arr[i+1] && Character(arr[i]) == o {
-        total += total
-        i += i
-        
+let count = Int(readLine()!)!
+for _ in 0 ..< count {
+    let result = readLine()!.map { String ($0) }
+    var previousScore = 0
+    var totalScore = 0
+    for i in result {
+        if i == "O" {
+            previousScore += 1
+            totalScore += previousScore
+        } else {
+            previousScore = 0
+        }
     }
+    print(totalScore)
 }
 
 
