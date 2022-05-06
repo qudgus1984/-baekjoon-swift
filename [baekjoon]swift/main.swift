@@ -458,14 +458,21 @@ print(arr/Float(sub))
 */
 
 
-var study = "공부"
-var allen = "Allen 강의"
-var ing = "하는중"
-var daily = "매일"
-print("\(allen)\(study)\(ing)")
-print("\(allen)\(study)\(ing)")
-print("\(allen)\(daily)\(study)\(ing)")
-print("12강까지 완료")
+// 이메일과 비밀번호 입력받고 맞는지 확인하기
+var email: String = "qudgus1984@naver.com"
+var passWord: String = "tkfkd0191!"
+var emailTyping: String = readLine()!
+var passWordTyping: String = readLine()!
+if emailTyping == email {
+    if passWordTyping == passWord {
+        print("로그인 되었습니다.")
+    } else {
+        print("이메일 혹은 비밀번호 오류")
+    }
+} else {
+    print("이메일 혹은 비밀번호 오류")
+}
+
 
 
 
