@@ -493,6 +493,7 @@ for _ in 0 ..< count {
 }
 */
 
+/*
 let t = Int(readLine()!)!
 for _ in 0 ..< t {
     let result = readLine()!.map{String ($0)}
@@ -508,8 +509,14 @@ for _ in 0 ..< t {
     }
     print(totalScore)
 }
+*/
 
+// 백준 알고리즘 4344
 
+let t = Int(readLine()!)!
+for _ in 0 ..< t {
+    let average = readLine()!.map{String ($0)}
+}
 
 
 
