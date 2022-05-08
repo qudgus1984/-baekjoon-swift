@@ -532,7 +532,8 @@ for _ in 0..<count{
 }
 
 var a: Bool = true
-
+var b: Bool = false
+print("\(a)\(b)")
 
 
 
