@@ -531,6 +531,9 @@ for _ in 0..<count{
     print(String(format: "%.3f", Float(result) / Float(studentNum) * 100),"%",separator: "")
 }
 
+var a: Bool = true
+
+
 
 
 
