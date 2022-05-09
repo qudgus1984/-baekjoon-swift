@@ -589,6 +589,8 @@ for _ in 0 ..< t {
 //    print("Bingo")
 //}
 
-for a in 1...10 {
-    print(a)
+var j = 1
+for i in 1...10 {
+    print(j)
+    j += 1
 }
