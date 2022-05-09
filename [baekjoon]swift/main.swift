@@ -546,36 +546,36 @@ for _ in 0 ..< t {
 //    break
 //}
 
-// Allen if문 가위바위보 게임
-
-var comRsp = Int.random(in: 0...2)
-var rsp:Int = Int(readLine()!)!
-if  comRsp == rsp {
-    print("무승부입니다.")
-} else if (comRsp == 0 && rsp == 2) || (comRsp == 1 && rsp == 0) || (comRsp == 2 && rsp == 1) {
-    print("당신은 졌습니다.")
-} else {
-    print("당신이 이겼습니다.")
-}
-
-// 다르게 풀기
-if rsp == 0 {
-    if comRsp == 0 {
-        print("무승부입니다.")
-    } else if comRsp == 1 {
-        print("당신은 졌습니다.")
-    } else {
-        print("당신은 이겼습니다.")
-    }
-} else if rsp == 1 {
-    if comRsp == 0 {
-        print("무승부입니다.")
-    } else if comRsp == 1 {
-        print("당신은 졌습니다.")
-    } else {
-        print("당신은 이겼습니다.")
-    }
-}
+//// Allen if문 가위바위보 게임
+//
+//var comRsp = Int.random(in: 0...2)
+//var rsp:Int = Int(readLine()!)!
+//if  comRsp == rsp {
+//    print("무승부입니다.")
+//} else if (comRsp == 0 && rsp == 2) || (comRsp == 1 && rsp == 0) || (comRsp == 2 && rsp == 1) {
+//    print("당신은 졌습니다.")
+//} else {
+//    print("당신이 이겼습니다.")
+//}
+//
+//// 다르게 풀기
+//if rsp == 0 {
+//    if comRsp == 0 {
+//        print("무승부입니다.")
+//    } else if comRsp == 1 {
+//        print("당신은 졌습니다.")
+//    } else {
+//        print("당신은 이겼습니다.")
+//    }
+//} else if rsp == 1 {
+//    if comRsp == 0 {
+//        print("무승부입니다.")
+//    } else if comRsp == 1 {
+//        print("당신은 졌습니다.")
+//    } else {
+//        print("당신은 이겼습니다.")
+//    }
+//}
 
 // Allen 랜덩 빙고 게임 만들기
 
