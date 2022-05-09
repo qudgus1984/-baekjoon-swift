@@ -595,7 +595,15 @@ for _ in 0 ..< t {
 //    j += 1
 //}
 //
-let list = ["right", "left", "up", "down"]
-for i in list {
-    print(i)
+//let list = ["right", "left", "up", "down"]
+//for i in list {
+//    print(i)
+//}
+
+var sum = 0
+var num = 1
+
+while num <= 50 {
+    print(num)
+    num += 1
 }
