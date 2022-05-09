@@ -589,8 +589,13 @@ for _ in 0 ..< t {
 //    print("Bingo")
 //}
 
-var j = 1
-for i in 1...10 {
-    print(j)
-    j += 1
+//var j = 1
+//for _ in 1...10 {
+//    print(j)
+//    j += 1
+//}
+//
+let list = ["right", "left", "up", "down"]
+for i in list {
+    print(i)
 }
