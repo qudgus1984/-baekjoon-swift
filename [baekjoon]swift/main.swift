@@ -579,13 +579,16 @@ for _ in 0 ..< t {
 
 // Allen 랜덩 빙고 게임 만들기
 
-var ranNum: Int = Int.random(in: 1...10)
-var numChoice: Int = Int(readLine()!)!
-if ranNum > numChoice {
-    print("Up")
-} else if ranNum < numChoice {
-    print("Down")
-} else {
-    print("Bingo")
-}
+//var ranNum: Int = Int.random(in: 1...10)
+//var numChoice: Int = Int(readLine()!)!
+//if ranNum > numChoice {
+//    print("Up")
+//} else if ranNum < numChoice {
+//    print("Down")
+//} else {
+//    print("Bingo")
+//}
 
+for a in 1...10 {
+    print(a)
+}
