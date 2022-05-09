@@ -558,7 +558,34 @@ if  comRsp == rsp {
     print("당신이 이겼습니다.")
 }
 
+// 다르게 풀기
+if rsp == 0 {
+    if comRsp == 0 {
+        print("무승부입니다.")
+    } else if comRsp == 1 {
+        print("당신은 졌습니다.")
+    } else {
+        print("당신은 이겼습니다.")
+    }
+} else if rsp == 1 {
+    if comRsp == 0 {
+        print("무승부입니다.")
+    } else if comRsp == 1 {
+        print("당신은 졌습니다.")
+    } else {
+        print("당신은 이겼습니다.")
+    }
+}
 
+// Allen 랜덩 빙고 게임 만들기
 
-
+var ranNum: Int = Int.random(in: 1...10)
+var numChoice: Int = Int(readLine()!)!
+if ranNum > numChoice {
+    print("Up")
+} else if ranNum < numChoice {
+    print("Down")
+} else {
+    print("Bingo")
+}
 
