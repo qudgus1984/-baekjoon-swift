@@ -531,22 +531,32 @@ for _ in 0 ..< t {
 //    print(String(format: "%.3f", Float(result) / Float(studentNum) * 100),"%",separator: "")
 //}
 
-var a: Bool = true
-var b: Bool = false
-print("\(a)\(b)")
+//var a: Bool = true
+//var b: Bool = false
+//print("\(a)\(b)")
+//
+//var num = 10
+//
+//switch num {
+//case ..<0:
+//    print("음수")
+//case 0...100:
+//    print("99까지")
+//default:
+//    break
+//}
 
-var num = 10
+// Allen if문 가위바위보 게임
 
-switch num {
-case ..<0:
-    print("음수")
-case 0...100:
-    print("99까지")
-default:
-    break
+var comRsp = Int.random(in: 0...2)
+var rsp:Int = Int(readLine()!)!
+if  comRsp == rsp {
+    print("무승부입니다.")
+} else if (comRsp == 0 && rsp == 2) || (comRsp == 1 && rsp == 0) || (comRsp == 2 && rsp == 1) {
+    print("당신은 졌습니다.")
+} else {
+    print("당신이 이겼습니다.")
 }
-
-
 
 
 
