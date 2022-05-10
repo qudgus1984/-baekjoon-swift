@@ -652,18 +652,30 @@ for _ in 0 ..< t {
 
 // 함수
 
-func loveHeart() {
-    for i in 1...9 {
-        for j in 1...9 {
-            if j <= i {
-                print("♥︎", terminator: "")
-            }
-        }
-        print()
-    }
+//func loveHeart() {
+//    for i in 1...9 {
+//        for j in 1...9 {
+//            if j <= i {
+//                print("♥︎", terminator: "")
+//            }
+//        }
+//        print()
+//    }
+//}
+//
+//loveHeart()
+
+// 함수 input
+func doSomething(name: String) {
+    print("당신의 이름은 \(name)입니다.")
+}
+doSomething(name: "cody")
+
+// 함수 output
+func sayHello() -> String {
+    return "cody"
 }
 
-loveHeart()
-
+print(sayHello())
 
 
