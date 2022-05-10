@@ -600,10 +600,19 @@ for _ in 0 ..< t {
 //    print(i)
 //}
 
-var sum = 0
-var num = 1
+//var sum = 0
+//var num = 1
+//
+//while num <= 50 {
+//    print(num)
+//    num += 1
+//}
 
-while num <= 50 {
-    print(num)
-    num += 1
+// 구구단 출력해보기
+
+for i in 2...9 {
+    for j in 1...9
+    {
+        print("\(i) x \(j) = \(i*j)")
+    }
 }
