@@ -666,33 +666,45 @@ for _ in 0 ..< t {
 //loveHeart()
 
 // 함수 input
-func doSomething(name: String) {
-    print("당신의 이름은 \(name)입니다.")
+//func doSomething(name: String) {
+//    print("당신의 이름은 \(name)입니다.")
+//}
+//doSomething(name: "cody")
+//
+//// 함수 output
+//func sayHello() -> String {
+//    return "cody"
+//}
+//
+//var nameIs = sayHello()
+//print(nameIs+sayHello())
+//
+//
+//func whatYourName() -> String {
+//    let myName = "cody"
+//    return myName
+//}
+//
+//print(whatYourName())
+//
+//// 함수에 인풋과 아웃풋이 전부 있는 경우
+//func plusFunction(a: Int, b: Int) -> Int {
+//    let c = a + b
+//    return c
+//}
+//
+//print(plusFunction(a: 3, b: 5))
+
+
+// 가변 파라미터 : 파라미터의 개수가 정해지지 않은 파라미터
+
+func plusAllNum(_ numbers: Double...) -> Double {
+    var total = 0.0
+    for n in numbers {
+        total += n
+    }
+    return total
 }
-doSomething(name: "cody")
 
-// 함수 output
-func sayHello() -> String {
-    return "cody"
-}
-
-var nameIs = sayHello()
-print(nameIs+sayHello())
-
-
-func whatYourName() -> String {
-    let myName = "cody"
-    return myName
-}
-
-print(whatYourName())
-
-// 함수에 인풋과 아웃풋이 전부 있는 경우
-func plusFunction(a: Int, b: Int) -> Int {
-    let c = a + b
-    return c
-}
-
-print(plusFunction(a: 3, b: 5))
-
+print(plusAllNum(1.1, 2.5))
 
