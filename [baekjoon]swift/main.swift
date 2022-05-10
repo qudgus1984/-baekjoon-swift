@@ -709,13 +709,32 @@ for _ in 0 ..< t {
 //print(plusAllNum(1.1, 2.5))
 
 // 함수의 파라미터에 기본값 설정
-func tenPlus(first num1: Int, second num2: Int = 10) -> Int {
-    let result = num1 + num2
-    return result
-}
-print(tenPlus(first: 1))
-print(tenPlus(first: 1, second: 3))
-
-print("안녕하세요", "cody", separator: " 히히 ", terminator: "")
+//func tenPlus(first num1: Int, second num2: Int = 10) -> Int {
+//    let result = num1 + num2
+//    return result
+//}
+//print(tenPlus(first: 1))
+//print(tenPlus(first: 1, second: 3))
+//
+//print("안녕하세요", "cody", separator: " 히히 ", terminator: "")
 // print라는 것도 사실 함수고, 가변 파라미터임. 기본값이 쓰이기 때문에 사용한거지 separator과 terminator가 사용된 것
 
+// 중첩 함수
+func winLose(win: Bool, value: Int) -> Int {
+    func canWin(input: Int)-> Int {
+        return input + 1
+    }
+    func canLose(input: Int) -> Int {
+        return input - 1
+    }
+    
+    if win {
+        return canWin(input: value)
+    } else {
+        return canLose(input: value)
+    }
+}
+
+var value = 0
+
+print(winLose(win: false, value: value))
