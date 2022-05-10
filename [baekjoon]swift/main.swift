@@ -698,13 +698,19 @@ for _ in 0 ..< t {
 
 // 가변 파라미터 : 파라미터의 개수가 정해지지 않은 파라미터
 
-func plusAllNum(_ numbers: Double...) -> Double {
-    var total = 0.0
-    for n in numbers {
-        total += n
-    }
-    return total
+//func plusAllNum(_ numbers: Double...) -> Double {
+//    var total = 0.0
+//    for n in numbers {
+//        total += n
+//    }
+//    return total
+//}
+//
+//print(plusAllNum(1.1, 2.5))
+
+// 함수의 파라미터에 기본값 설정
+func tenPlus(first num1: Int, second num2: Int = 10) -> Int {
+    let result = num1 + num2
+    return result
 }
-
-print(plusAllNum(1.1, 2.5))
-
+print(tenPlus(first: 1))
