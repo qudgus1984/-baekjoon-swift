@@ -714,3 +714,8 @@ func tenPlus(first num1: Int, second num2: Int = 10) -> Int {
     return result
 }
 print(tenPlus(first: 1))
+print(tenPlus(first: 1, second: 3))
+
+print("안녕하세요", "cody", separator: " 히히 ", terminator: "")
+// print라는 것도 사실 함수고, 가변 파라미터임. 기본값이 쓰이기 때문에 사용한거지 separator과 terminator가 사용된 것
+
