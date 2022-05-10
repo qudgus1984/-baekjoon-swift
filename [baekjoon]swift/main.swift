@@ -641,15 +641,29 @@ for _ in 0 ..< t {
 //}
 
 // 다르게 풀어보기
-for i in 1...5 {
-    for j in 1...5 {
-        if j <= i {
-            print("😄", terminator: "")
+//for i in 1...5 {
+//    for j in 1...5 {
+//        if j <= i {
+//            print("😄", terminator: "")
+//        }
+//    }
+//    print()
+//}
+
+// 함수
+
+func loveHeart() {
+    for i in 1...9 {
+        for j in 1...9 {
+            if j <= i {
+                print("♥︎", terminator: "")
+            }
         }
+        print()
     }
-    print()
 }
 
+loveHeart()
 
 
 
