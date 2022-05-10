@@ -634,8 +634,22 @@ for _ in 0 ..< t {
 //}
 
 // 반복문 활용, 논리를 구성해서 출력해보기
-var smile: String = "😄"
-for _ in 1...5 {
-    print("\(smile)")
-    smile += "😄"
+//var smile: String = "😄"
+//for _ in 1...5 {
+//    print("\(smile)")
+//    smile += "😄"
+//}
+
+// 다르게 풀어보기
+for i in 1...5 {
+    for j in 1...5 {
+        if j <= i {
+            print("😄", terminator: "")
+        }
+    }
+    print()
 }
+
+
+
+
