@@ -676,6 +676,23 @@ func sayHello() -> String {
     return "cody"
 }
 
-print(sayHello())
+var nameIs = sayHello()
+print(nameIs+sayHello())
+
+
+func whatYourName() -> String {
+    let myName = "cody"
+    return myName
+}
+
+print(whatYourName())
+
+// 함수에 인풋과 아웃풋이 전부 있는 경우
+func plusFunction(a: Int, b: Int) -> Int {
+    let c = a + b
+    return c
+}
+
+print(plusFunction(a: 3, b: 5))
 
 
