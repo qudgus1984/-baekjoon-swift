@@ -739,11 +739,70 @@ for _ in 0 ..< t {
 //
 //print(winLose(win: false, value: value))
 
-var num1 = 123 // 전역변수
-var num2 = 456 // 전역변수
+// 함수 내에서 swap 구현 불가능
+//var num1 = 123 // 전역변수
+//var num2 = 456 // 전역변수
+//
+//func swap(a: Int, b: Int) {
+//
+//}
+//
+//swap(a: num1, b: num2)
 
-func swap(a: Int, b: Int) {
+// 참조 -> 메모리 주소 전달
 
+//var num1 = 123 // 전역변수
+//var num2 = 456 // 전역변수
+//
+//func swapNumbers(a: inout Int, b: inout Int) {
+//    var temp = a
+//    a = b
+//    b = temp
+//}
+//
+//swapNumbers(a: &num1, b: &num2)
+//print(num1, num2) // 456 123
+
+// 함수 파트
+
+// 가드문 (guard)
+// if 문의 단점 - 여러 개 조건이 있을 때 가독성이 떨어짐 -> guard
+//
+//if true {
+//    print("1")
+//    if true {
+//        print("2")
+//        if true {
+//            print("3")
+//        }
+//    }
+//}
+//
+//func checkNumIf(password: String) -> Bool {
+//    if password.count >= 6 {
+//        return true
+//    } else {
+//        return false
+//    }
+//}
+//
+//
+//func checkNumGuard(password: String) -> Bool {
+//    guard password.count >= else { return false }
+//
+//
+//    return true
+//}
+
+// gaurd문은 if문과 매우 비슷하지만, else문을 먼저 배치하는 것이라고 생각하면 됌.
+// => 조건을 만족하는 경우 코드가 다음 줄로 넘어가서 계속 실행
+
+// 문자열 중 한글자 랜덤으로 뽑아내는 함수
+
+func randomHangle(hangle: String) -> String {
+    return String(hangle.randomElement()!)
 }
 
-swap(a: num1, b: num2)
+print(randomHangle(hangle: "cody"))
+
+
