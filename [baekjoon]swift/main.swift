@@ -720,21 +720,30 @@ for _ in 0 ..< t {
 // print라는 것도 사실 함수고, 가변 파라미터임. 기본값이 쓰이기 때문에 사용한거지 separator과 terminator가 사용된 것
 
 // 중첩 함수
-func winLose(win: Bool, value: Int) -> Int {
-    func canWin(input: Int)-> Int {
-        return input + 1
-    }
-    func canLose(input: Int) -> Int {
-        return input - 1
-    }
-    
-    if win {
-        return canWin(input: value)
-    } else {
-        return canLose(input: value)
-    }
+//func winLose(win: Bool, value: Int) -> Int {
+//    func canWin(input: Int)-> Int {
+//        return input + 1
+//    }
+//    func canLose(input: Int) -> Int {
+//        return input - 1
+//    }
+//
+//    if win {
+//        return canWin(input: value)
+//    } else {
+//        return canLose(input: value)
+//    }
+//}
+//
+//var value = 0
+//
+//print(winLose(win: false, value: value))
+
+var num1 = 123 // 전역변수
+var num2 = 456 // 전역변수
+
+func swap(a: Int, b: Int) {
+
 }
 
-var value = 0
-
-print(winLose(win: false, value: value))
+swap(a: num1, b: num2)
