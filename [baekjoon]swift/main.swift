@@ -799,10 +799,23 @@ for _ in 0 ..< t {
 
 // 문자열 중 한글자 랜덤으로 뽑아내는 함수
 
-func randomHangle(hangle: String) -> String {
-    return String(hangle.randomElement()!)
+//func randomHangle(hangle: String) -> String {
+//    return String(hangle.randomElement()!)
+//}
+//
+//print(randomHangle(hangle: "cody"))
+//
+
+// 소수 판별하는 함수
+
+func sosu(num: Int) {
+    for i in 2..<num {
+        if num % i != 0 {
+            print("소수입니다.")
+        } else {
+            print("소수가 아닙니다.")
+        }
+    }
 }
 
-print(randomHangle(hangle: "cody"))
-
-
+print(sosu(num: 14))
