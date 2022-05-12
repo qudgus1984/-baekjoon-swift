@@ -843,12 +843,22 @@ for _ in 0 ..< t {
 
 // 팩토리얼 함수 만들어보기
 
-var sum = 1
-func factorial(num: Int) -> Int {
-    for i in 1...num {
-        sum = sum * i
+//var sum = 1
+//func factorial(num: Int) -> Int {
+//    for i in 1...num {
+//        sum = sum * i
+//    }
+//    return sum
+//}
+//
+//print(factorial(num: 8))
+
+// 재귀함수로 팩토리얼 구하기
+func factorialF(num: Int) -> Int {
+    if num <= 1 {
+        return 1
     }
-    return sum
+    return num * factorialF(num: num - 1)
 }
 
-print(factorial(num: 8))
+print(factorialF(num: 5))
