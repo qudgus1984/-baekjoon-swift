@@ -953,20 +953,20 @@ var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 //    print(stringArray[index])
 //}
 
-// 배열 삽입하기
+// 삽입하기 insert
 var alpha: [String] = ["a", "b", "c"]
 alpha.insert("d", at: 3) // 배열 4번째에 d를 추가하라는 의미
 print(alpha) // ["a", "b", "c", "d"]
 alpha.insert(contentsOf: ["e","f"], at: 4) // 배열을 삽입한다는 의미.
 print(alpha) // ["a", "b", "c", "d", "e", "f"]
 
-// 교체하기
+// 교체하기 replace
 alpha[0] = "A"
 print(alpha) // ["A", "b", "c", "d", "e", "f"]
 alpha[1...3] = ["B", "C", "D"]
 print(alpha) // ["A", "B", "C", "D", "e", "f"]
 
-// 삭제
+// 삭제하기 간단버전
 alpha[4...5] = []
 print(alpha) // ["A", "B", "C", "D"]
 
@@ -974,13 +974,13 @@ print(alpha) // ["A", "B", "C", "D"]
 alpha.replaceSubrange(0...3, with: ["a","b","c","d"])
 print(alpha) // ["a", "b", "c", "d"]
 
-// 추가하기
+// 추가하기 append
 alpha.append("e") // 끝에 추가한다
 print(alpha) // ["a", "b", "c", "d", "e"]
 alpha += ["f"] // append와 같은 의미
 print(alpha) // ["a", "b", "c", "d", "e", "f"]
 
-// 삭제하기
+// 삭제하기 remove
 alpha.remove(at: 5) // 6번째에 있는 인덱스 제거
 print(alpha) // ["a", "b", "c", "d", "e"]
 alpha.removeSubrange(0...4) // 1~5번 째 인덱스 제거
@@ -990,6 +990,6 @@ alpha.insert(contentsOf: ["a","b","c","d"], at: 0)
 print(alpha) // ["a", "b", "c", "d"]
 alpha.removeAll() // 모든 배열, 메모리 공간을 삭제함
 alpha.removeAll(keepingCapacity: true) // 모든 배열은 삭제하지만, 메모리 공간은 남겨둠.
-
+print(alpha) // []
 
 
