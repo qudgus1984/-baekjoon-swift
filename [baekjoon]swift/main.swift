@@ -881,26 +881,34 @@ for _ in 0 ..< t {
 //var hello = hi ?? "헬로우" // 기본값으로 제시
 //print(hello) // hi에 값이 있다면 "하이" 를, hi에 값이 없다면 hello의 기본값인 헬로우 를 출력
 
-var num: Int? = 10
+// 옵셔널 바인딩 연습
+//var num: Int? = 10
+//
+//if let y = num {
+//    print(y)
+//}
+//
+//func doPrinting(x: Int?) {
+//    guard let z = x else { return }
+//    print(z)
+//}
+//
+//doPrinting(x: 9)
+//
+//func doString(st: String?) {
+//    guard let ring = st else { return }
+//    print(ring)
+//}
+//
+//doString(st: "제바알")
 
-if let y = num {
-    print(y)
+// 옵셔널 타입의 응용
+
+func doSomePrint(with label: String, name: String? = nil) {
+    print("\(label) \(name)")
 }
 
-func doPrinting(x: Int?) {
-    guard let z = x else { return }
-    print(z)
-}
+doSomePrint(with: "레이블")
+doSomePrint(with: "레이블", name: "cody")
 
-doPrinting(x: 9)
-
-func doString(st: String?) {
-    guard let ring = st else { return }
-    print(ring)
-}
-
-doString(st: "제바알")
-
-
-
-
+// 위와 같이 name부분을 옵셔널로 해주고 nil값으로 미리 해두면, name 부분 생략 가능
