@@ -920,16 +920,21 @@ var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 // 한 개의 배열에는 같은 타입의 데이터만 담을 수 있음.
 // 순서가 있기 때문에 값은 중복 가능
 // 리터럴 : "5" => 문자열 리터럴 7 => 정수형 리터럴
-var intArray:[Int] = [1, 2, 3, 4] // 배열의 형태
-var stringArray:[String] = ["이것은", "문자열", "배열"]
+//var intArray:[Int] = [1, 2, 3, 4] // 배열의 형태
+//var stringArray:[String] = ["이것은", "문자열", "배열"]
 
 // 배열의 타입 표기
-let strArray: Array<String> // 정식 문법
-let strArray1: [String] = [] // 간략화
+//let strArray: Array<String> // 정식 문법
+//let strArray1: [String] = [] // 간략화
 
 // 빈 배열의 생성
-let emptyArray1: [Int] = []
-let emptyArray2 = Array<Int>()
-let emptyArray3 = [Int]()
-print(emptyArray3)
+//let emptyArray1: [Int] = []
+//let emptyArray2 = Array<Int>()
+//let emptyArray3 = [Int]()
+
+print(numArray.count)
+print(numArray.isEmpty)
+print(numArray.contains(1))
+print(numArray.randomElement())
+print(numArray.swapAt(0, 1))
 
