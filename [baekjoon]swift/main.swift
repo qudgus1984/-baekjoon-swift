@@ -877,6 +877,30 @@ for _ in 0 ..< t {
 //unwrapping(name: "옵셔널 바인딩 함수")
 
 // 코얼레싱
-var hi: String? = "하이"
-var hello = hi ?? "헬로우" // 기본값으로 제시
-print(hello) // hi에 값이 있다면 "하이" 를, hi에 값이 없다면 hello의 기본값인 헬로우 를 출력
+//var hi: String? = "하이"
+//var hello = hi ?? "헬로우" // 기본값으로 제시
+//print(hello) // hi에 값이 있다면 "하이" 를, hi에 값이 없다면 hello의 기본값인 헬로우 를 출력
+
+var num: Int? = 10
+
+if let y = num {
+    print(y)
+}
+
+func doPrinting(x: Int?) {
+    guard let z = x else { return }
+    print(z)
+}
+
+doPrinting(x: 9)
+
+func doString(st: String?) {
+    guard let ring = st else { return }
+    print(ring)
+}
+
+doString(st: "제바알")
+
+
+
+
