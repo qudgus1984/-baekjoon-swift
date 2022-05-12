@@ -854,11 +854,22 @@ for _ in 0 ..< t {
 //print(factorial(num: 8))
 
 // 재귀함수로 팩토리얼 구하기
-func factorialF(num: Int) -> Int {
-    if num <= 1 {
-        return 1
-    }
-    return num * factorialF(num: num - 1)
+//func factorialF(num: Int) -> Int {
+//    if num <= 1 {
+//        return 1
+//    }
+//    return num * factorialF(num: num - 1)
+//}
+//
+//print(factorialF(num: 5))
+
+//var num1: Int? = 3
+//var num2: Int? = 4
+//print(num1!+num2!)
+
+func unwrapping(name: String?) {
+    guard let n = name else { return }
+    print(n)
 }
 
-print(factorialF(num: 5))
+unwrapping(name: "옵셔널 바인딩 함수")
