@@ -932,9 +932,26 @@ var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 //let emptyArray2 = Array<Int>()
 //let emptyArray3 = [Int]()
 
-print(numArray.count)
-print(numArray.isEmpty)
-print(numArray.contains(1))
-print(numArray.randomElement())
-print(numArray.swapAt(0, 1))
+//print(numArray.count)
+//print(numArray.isEmpty)
+//print(numArray.contains(1))
+//print(numArray.randomElement())
+//print(numArray.swapAt(0, 1))
+
+// 서브스크립트 문법 (대괄호를 이용한 특별한 함수)
+print(numArray[0])
+
+var stringArray:[String] = ["cody", "hamang", "ddong"]
+stringArray[1] = "manju"
+print(stringArray[1])
+print(stringArray.first!) // 값이 옵셔널로 나옴 why? 값이 없을 수도 있기 때문에
+print(stringArray.endIndex) // 배열로 저장되는 메모리 값의 끝의 주소를 의미하기 때문에 3이나옴
+print(stringArray[stringArray.endIndex-1]) // 마지막 인덱스를 나타내기 위해선 위와 같이 해주어야함
+
+if let index = stringArray.firstIndex(of: "cody") {
+    print(index)
+    print(stringArray[index])
+}
+
+
 
