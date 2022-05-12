@@ -826,17 +826,29 @@ for _ in 0 ..< t {
 
 
 // 소수 판별하는 함수
-func primeNumberChoice(num: Int) -> Bool {
-    for i in 2..<num {
-        if num % i == 0 {
-            return false
-        }
+//func primeNumberChoice(num: Int) -> Bool {
+//    for i in 2..<num {
+//        if num % i == 0 {
+//            return false
+//        }
+//    }
+//    return true
+//}
+//
+//if primeNumberChoice(num: 97) {
+//    print("소수입니다.")
+//} else {
+//    print("소수가 아닙니다.")
+//}
+
+// 팩토리얼 함수 만들어보기
+
+var sum = 1
+func pack(num: Int) -> Int {
+    for i in 1...num {
+        sum = sum * i
     }
-    return true
+    return sum
 }
 
-if primeNumberChoice(num: 97) {
-    print("소수입니다.")
-} else {
-    print("소수가 아닙니다.")
-}
+print(pack(num: 5))
