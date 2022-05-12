@@ -939,19 +939,57 @@ var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 //print(numArray.swapAt(0, 1))
 
 // 서브스크립트 문법 (대괄호를 이용한 특별한 함수)
-print(numArray[0])
+//print(numArray[0])
+//
+//var stringArray:[String] = ["cody", "hamang", "ddong"]
+//stringArray[1] = "manju"
+//print(stringArray[1])
+//print(stringArray.first!) // 값이 옵셔널로 나옴 why? 값이 없을 수도 있기 때문에
+//print(stringArray.endIndex) // 배열로 저장되는 메모리 값의 끝의 주소를 의미하기 때문에 3이나옴
+//print(stringArray[stringArray.endIndex-1]) // 마지막 인덱스를 나타내기 위해선 위와 같이 해주어야함
+//
+//if let index = stringArray.firstIndex(of: "cody") {
+//    print(index)
+//    print(stringArray[index])
+//}
 
-var stringArray:[String] = ["cody", "hamang", "ddong"]
-stringArray[1] = "manju"
-print(stringArray[1])
-print(stringArray.first!) // 값이 옵셔널로 나옴 why? 값이 없을 수도 있기 때문에
-print(stringArray.endIndex) // 배열로 저장되는 메모리 값의 끝의 주소를 의미하기 때문에 3이나옴
-print(stringArray[stringArray.endIndex-1]) // 마지막 인덱스를 나타내기 위해선 위와 같이 해주어야함
+// 배열 삽입하기
+var alpha: [String] = ["a", "b", "c"]
+alpha.insert("d", at: 3) // 배열 4번째에 d를 추가하라는 의미
+print(alpha) // ["a", "b", "c", "d"]
+alpha.insert(contentsOf: ["e","f"], at: 4) // 배열을 삽입한다는 의미.
+print(alpha) // ["a", "b", "c", "d", "e", "f"]
 
-if let index = stringArray.firstIndex(of: "cody") {
-    print(index)
-    print(stringArray[index])
-}
+// 교체하기
+alpha[0] = "A"
+print(alpha) // ["A", "b", "c", "d", "e", "f"]
+alpha[1...3] = ["B", "C", "D"]
+print(alpha) // ["A", "B", "C", "D", "e", "f"]
+
+// 삭제
+alpha[4...5] = []
+print(alpha) // ["A", "B", "C", "D"]
+
+// 교체하기 필수 문법
+alpha.replaceSubrange(0...3, with: ["a","b","c","d"])
+print(alpha) // ["a", "b", "c", "d"]
+
+// 추가하기
+alpha.append("e") // 끝에 추가한다
+print(alpha) // ["a", "b", "c", "d", "e"]
+alpha += ["f"] // append와 같은 의미
+print(alpha) // ["a", "b", "c", "d", "e", "f"]
+
+// 삭제하기
+alpha.remove(at: 5) // 6번째에 있는 인덱스 제거
+print(alpha) // ["a", "b", "c", "d", "e"]
+alpha.removeSubrange(0...4) // 1~5번 째 인덱스 제거
+print(alpha) // []
+
+alpha.insert(contentsOf: ["a","b","c","d"], at: 0)
+print(alpha) // ["a", "b", "c", "d"]
+alpha.removeAll() // 모든 배열, 메모리 공간을 삭제함
+alpha.removeAll(keepingCapacity: true) // 모든 배열은 삭제하지만, 메모리 공간은 남겨둠.
 
 
 
