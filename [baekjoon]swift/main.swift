@@ -916,7 +916,7 @@ for _ in 0 ..< t {
 // 배열
 
 // 인덱스 : 순번, 번호표 라고 생각하기
-var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
+//var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 // 한 개의 배열에는 같은 타입의 데이터만 담을 수 있음.
 // 순서가 있기 때문에 값은 중복 가능
 // 리터럴 : "5" => 문자열 리터럴 7 => 정수형 리터럴
@@ -954,42 +954,71 @@ var numArray = [1, 2, 3, 4, 5] // 배열의 인덱스 시작은 0부터
 //}
 
 // 삽입하기 insert
-var alpha: [String] = ["a", "b", "c"]
-alpha.insert("d", at: 3) // 배열 4번째에 d를 추가하라는 의미
-print(alpha) // ["a", "b", "c", "d"]
-alpha.insert(contentsOf: ["e","f"], at: 4) // 배열을 삽입한다는 의미.
-print(alpha) // ["a", "b", "c", "d", "e", "f"]
+//var alpha: [String] = ["a", "b", "c"]
+//alpha.insert("d", at: 3) // 배열 4번째에 d를 추가하라는 의미
+//print(alpha) // ["a", "b", "c", "d"]
+//alpha.insert(contentsOf: ["e","f"], at: 4) // 배열을 삽입한다는 의미.
+//print(alpha) // ["a", "b", "c", "d", "e", "f"]
+//
+//// 교체하기 replace
+//alpha[0] = "A"
+//print(alpha) // ["A", "b", "c", "d", "e", "f"]
+//alpha[1...3] = ["B", "C", "D"]
+//print(alpha) // ["A", "B", "C", "D", "e", "f"]
+//
+//// 삭제하기 간단버전
+//alpha[4...5] = []
+//print(alpha) // ["A", "B", "C", "D"]
+//
+//// 교체하기 필수 문법
+//alpha.replaceSubrange(0...3, with: ["a","b","c","d"])
+//print(alpha) // ["a", "b", "c", "d"]
+//
+//// 추가하기 append
+//alpha.append("e") // 끝에 추가한다
+//print(alpha) // ["a", "b", "c", "d", "e"]
+//alpha += ["f"] // append와 같은 의미
+//print(alpha) // ["a", "b", "c", "d", "e", "f"]
+//
+//// 삭제하기 remove
+//alpha.remove(at: 5) // 6번째에 있는 인덱스 제거
+//print(alpha) // ["a", "b", "c", "d", "e"]
+//alpha.removeSubrange(0...4) // 1~5번 째 인덱스 제거
+//print(alpha) // []
+//
+//alpha.insert(contentsOf: ["a","b","c","d"], at: 0)
+//print(alpha) // ["a", "b", "c", "d"]
+//alpha.removeAll() // 모든 배열, 메모리 공간을 삭제함
+//alpha.removeAll(keepingCapacity: true) // 모든 배열은 삭제하지만, 메모리 공간은 남겨둠.
+//print(alpha) // []
 
-// 교체하기 replace
-alpha[0] = "A"
-print(alpha) // ["A", "b", "c", "d", "e", "f"]
-alpha[1...3] = ["B", "C", "D"]
-print(alpha) // ["A", "B", "C", "D", "e", "f"]
+// 정렬
+var nums = [1,2,3,1,1,4,5,6,7,8,5,9]
 
-// 삭제하기 간단버전
-alpha[4...5] = []
-print(alpha) // ["A", "B", "C", "D"]
+nums.sort() // 배열을 직접 정렬. 배열을 리턴하지 않음
+print(nums) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
 
-// 교체하기 필수 문법
-alpha.replaceSubrange(0...3, with: ["a","b","c","d"])
-print(alpha) // ["a", "b", "c", "d"]
+var num = [1,2,3,1,1,4,5,6,7,8,5,9]
+print(num.sorted()) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
+print(num) // [1, 2, 3, 1, 1, 4, 5, 6, 7, 8, 5, 9]
 
-// 추가하기 append
-alpha.append("e") // 끝에 추가한다
-print(alpha) // ["a", "b", "c", "d", "e"]
-alpha += ["f"] // append와 같은 의미
-print(alpha) // ["a", "b", "c", "d", "e", "f"]
+// sorted() : 배열을 변환하고 다시 원래 배열을 리턴해줌.
 
-// 삭제하기 remove
-alpha.remove(at: 5) // 6번째에 있는 인덱스 제거
-print(alpha) // ["a", "b", "c", "d", "e"]
-alpha.removeSubrange(0...4) // 1~5번 째 인덱스 제거
-print(alpha) // []
+var numreverse = [1,2,3,1,1,4,5,6,7,8,5,9]
+numreverse.reverse()
+print(numreverse) // [9, 5, 8, 7, 6, 5, 4, 1, 1, 3, 2, 1]
 
-alpha.insert(contentsOf: ["a","b","c","d"], at: 0)
-print(alpha) // ["a", "b", "c", "d"]
-alpha.removeAll() // 모든 배열, 메모리 공간을 삭제함
-alpha.removeAll(keepingCapacity: true) // 모든 배열은 삭제하지만, 메모리 공간은 남겨둠.
-print(alpha) // []
+var data = [[1,2],[3,4]]
+print(data[0][1]) // data 배열 첫번째의 2번째 인덱스에 접근
 
+for i in nums {
+    print(i)
+} // 1,21,1,2,3,4,5,5,6,7,8,9
 
+// enumerate : 열거하다
+nums = [10, 11, 12, 13]
+for tuple in nums.enumerated() {
+    print(tuple) // (offset: 0, element: 10),(offset: 1, element: 11)
+                 // (offset: 2, element: 12),(offset: 3, element: 13)
+}
+// 즉, named 튜플 형태로 출력. 인덱스 번호와 값 둘다 출력
