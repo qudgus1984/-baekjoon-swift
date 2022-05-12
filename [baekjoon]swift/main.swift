@@ -1020,5 +1020,6 @@ nums = [10, 11, 12, 13]
 for tuple in nums.enumerated() {
     print(tuple) // (offset: 0, element: 10),(offset: 1, element: 11)
                  // (offset: 2, element: 12),(offset: 3, element: 13)
+    print("\(tuple.offset)-\(tuple.element)")
 }
 // 즉, named 튜플 형태로 출력. 인덱스 번호와 값 둘다 출력
