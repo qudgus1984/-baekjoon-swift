@@ -844,11 +844,11 @@ for _ in 0 ..< t {
 // 팩토리얼 함수 만들어보기
 
 var sum = 1
-func pack(num: Int) -> Int {
+func factorial(num: Int) -> Int {
     for i in 1...num {
         sum = sum * i
     }
     return sum
 }
 
-print(pack(num: 5))
+print(factorial(num: 8))
