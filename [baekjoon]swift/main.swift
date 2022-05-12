@@ -867,9 +867,16 @@ for _ in 0 ..< t {
 //var num2: Int? = 4
 //print(num1!+num2!)
 
-func unwrapping(name: String?) {
-    guard let n = name else { return }
-    print(n)
-}
+// 옵셔널 바인딩 함수
 
-unwrapping(name: "옵셔널 바인딩 함수")
+//func unwrapping(name: String?) {
+//    guard let n = name else { return }
+//    print(n)
+//}
+//
+//unwrapping(name: "옵셔널 바인딩 함수")
+
+// 코얼레싱
+var hi: String? = "하이"
+var hello = hi ?? "헬로우" // 기본값으로 제시
+print(hello) // hi에 값이 있다면 "하이" 를, hi에 값이 없다면 hello의 기본값인 헬로우 를 출력
