@@ -806,19 +806,36 @@ for _ in 0 ..< t {
 //print(randomHangle(hangle: "cody"))
 //
 
+// 소수 판별하는 알고리즘
+
+//var num = Int(readLine()!)!
+//var isPrime:Bool = true
+//
+//for i in 2..<num {
+//    if num % i == 0 {
+//        isPrime = false
+//        break
+//    }
+//}
+//
+//if isPrime {
+//    print("소수입니다.")
+//} else {
+//    print("소수가 아닙니다.")
+//}
+
+
 // 소수 판별하는 함수
-
-var num = Int(readLine()!)!
-var isPrime:Bool = true
-
-for i in 2..<num {
-    if num % i == 0 {
-        isPrime = false
-        break
+func primeNumberChoice(num: Int) -> Bool {
+    for i in 2..<num {
+        if num % i == 0 {
+            return false
+        }
     }
+    return true
 }
 
-if isPrime {
+if primeNumberChoice(num: 97) {
     print("소수입니다.")
 } else {
     print("소수가 아닙니다.")
