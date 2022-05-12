@@ -808,14 +808,18 @@ for _ in 0 ..< t {
 
 // 소수 판별하는 함수
 
-func sosu(num: Int) {
-    for i in 2..<num {
-        if num % i != 0 {
-            print("소수입니다.")
-        } else {
-            print("소수가 아닙니다.")
-        }
+var num = Int(readLine()!)!
+var isPrime:Bool = true
+
+for i in 2..<num {
+    if num % i == 0 {
+        isPrime = false
+        break
     }
 }
 
-print(sosu(num: 14))
+if isPrime {
+    print("소수입니다.")
+} else {
+    print("소수가 아닙니다.")
+}
