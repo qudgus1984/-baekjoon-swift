@@ -1065,4 +1065,22 @@ print(words)
 words["A"] = nil
 print(words)
 
+// 딕셔너리 비교
+let a = ["B":"boy","A":"Auto"]
+let b = ["A":"Auto","B":"boy"]
+
+print(a==b) // true
+// 딕셔너리는 순서가 없기 때문에 위 a,b가 같다고 할 수 있음.
+
+// 딕셔너리 활용
+var dict1 = [String: [String]]()
+dict1["arr1"] = ["A","B","C"]
+print(dict1) //["arr1": ["A", "B", "C"]]
+
+// 반복문과 결합
+
+let dict = ["A":"Apple","B":"Banana","C":"City"]
+for (key,value) in dict {
+    print("\(key):\(value)")
+}
 
