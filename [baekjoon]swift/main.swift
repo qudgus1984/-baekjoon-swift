@@ -1025,62 +1025,82 @@ for _ in 0 ..< t {
 // 즉, named 튜플 형태로 출력. 인덱스 번호와 값 둘다 출력
 
 // 딕셔너리
+//
+//var dic = ["A": "apple", "B": "banana", "C": "cap"]
+//print(dic)
+//
+//if let tuple = dic.randomElement() {
+//    print(tuple)
+//}
+//
+//print(dic["B"]) // 옵셔널로 반환 => nil의 가능성이 있기 때문
+//
+//if let b = dic["B"] { // 따라서 위와 같이 옵셔널 바인딩을 해주어야 함.
+//    print(b)
+//}
+//
+//// 딕셔널는 값만 따로 검색하는 방법은 존재하지 않음.
+//
+//print(dic.keys) // 키 값만
+//print(dic.values) // 벨류 값만
+//print(dic.keys.sorted()) // 키 값을 배열로 변환시켜줌.
+//print(dic.values.sorted()) // 벨류 값을 배열로 변환시켜줌.
+//
+//for key in dic.keys.sorted() { // 이렇게 키값을 배열로 사용해 반복문에서 사용할 수 있음.
+//    print(key)
+//}
+//
+//var words:[String: String]
+//words = [:]
+//words["A"] = "Apple" // 키가 없을땐 추가
+//print(words)
+//words["A"] = "Ace" // 키값이 존재한다면 변환
+//print(words)
+//
+//words.updateValue("City", forKey: "C")
+//print(words)
+//// 삭제
+//words.removeValue(forKey: "C")
+//print(words)
+//words["A"] = nil
+//print(words)
+//
+//// 딕셔너리 비교
+//let a = ["B":"boy","A":"Auto"]
+//let b = ["A":"Auto","B":"boy"]
+//
+//print(a==b) // true
+//// 딕셔너리는 순서가 없기 때문에 위 a,b가 같다고 할 수 있음.
+//
+//// 딕셔너리 활용
+//var dict1 = [String: [String]]()
+//dict1["arr1"] = ["A","B","C"]
+//print(dict1) //["arr1": ["A", "B", "C"]]
+//
+//// 반복문과 결합
+//
+//let dict = ["A":"Apple","B":"Banana","C":"City"]
+//for (key,value) in dict {
+//    print("\(key):\(value)")
+//}
 
-var dic = ["A": "apple", "B": "banana", "C": "cap"]
-print(dic)
+// 집합 Set
 
-if let tuple = dic.randomElement() {
-    print(tuple)
-}
+var set: Set = [1,1,2,2,3,3,3]
+print(set) // [2, 3, 1] => 중복 허용 x
 
-print(dic["B"]) // 옵셔널로 반환 => nil의 가능성이 있기 때문
+// 빈 Set 생성
+let emptySet: Set<Int> = []
+print(emptySet)
 
-if let b = dic["B"] { // 따라서 위와 같이 옵셔널 바인딩을 해주어야 함.
-    print(b)
-}
+// 집합은 순서도 없고 키,벨류 값도 없기 때문에 서브스크립트 관련 문법이 없음
+// ex) Set[0] => error!
+set.update(with: 4) // 4 추가
+print(set) //[2, 4, 1, 3]
 
-// 딕셔널는 값만 따로 검색하는 방법은 존재하지 않음.
-
-print(dic.keys) // 키 값만
-print(dic.values) // 벨류 값만
-print(dic.keys.sorted()) // 키 값을 배열로 변환시켜줌.
-print(dic.values.sorted()) // 벨류 값을 배열로 변환시켜줌.
-
-for key in dic.keys.sorted() { // 이렇게 키값을 배열로 사용해 반복문에서 사용할 수 있음.
-    print(key)
-}
-
-var words:[String: String]
-words = [:]
-words["A"] = "Apple" // 키가 없을땐 추가
-print(words)
-words["A"] = "Ace" // 키값이 존재한다면 변환
-print(words)
-
-words.updateValue("City", forKey: "C")
-print(words)
-// 삭제
-words.removeValue(forKey: "C")
-print(words)
-words["A"] = nil
-print(words)
-
-// 딕셔너리 비교
-let a = ["B":"boy","A":"Auto"]
-let b = ["A":"Auto","B":"boy"]
-
-print(a==b) // true
-// 딕셔너리는 순서가 없기 때문에 위 a,b가 같다고 할 수 있음.
-
-// 딕셔너리 활용
-var dict1 = [String: [String]]()
-dict1["arr1"] = ["A","B","C"]
-print(dict1) //["arr1": ["A", "B", "C"]]
-
-// 반복문과 결합
-
-let dict = ["A":"Apple","B":"Banana","C":"City"]
-for (key,value) in dict {
-    print("\(key):\(value)")
-}
-
+// 합집합 / 교집합 / 차집합 / 대칭차집합
+// union / intersetion / subtracting / ssymmetricDifferent
+var a: Set = [1,2]
+var b: Set = [2,3]
+var unionSet = a.union(b)
+print(unionSet)
