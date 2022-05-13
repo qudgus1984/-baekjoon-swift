@@ -1086,21 +1086,56 @@ for _ in 0 ..< t {
 
 // 집합 Set
 
-var set: Set = [1,1,2,2,3,3,3]
-print(set) // [2, 3, 1] => 중복 허용 x
+//var set: Set = [1,1,2,2,3,3,3]
+//print(set) // [2, 3, 1] => 중복 허용 x
+//
+//// 빈 Set 생성
+//let emptySet: Set<Int> = []
+//print(emptySet)
+//
+//// 집합은 순서도 없고 키,벨류 값도 없기 때문에 서브스크립트 관련 문법이 없음
+//// ex) Set[0] => error!
+//set.update(with: 4) // 4 추가
+//print(set) //[2, 4, 1, 3]
+//
+//// 합집합 / 교집합 / 차집합 / 대칭차집합
+//// union / intersetion / subtracting / ssymmetricDifferent
+//var a: Set = [1,2]
+//var b: Set = [2,3]
+//var unionSet = a.union(b)
+//print(unionSet)
 
-// 빈 Set 생성
-let emptySet: Set<Int> = []
-print(emptySet)
 
-// 집합은 순서도 없고 키,벨류 값도 없기 때문에 서브스크립트 관련 문법이 없음
-// ex) Set[0] => error!
-set.update(with: 4) // 4 추가
-print(set) //[2, 4, 1, 3]
 
-// 합집합 / 교집합 / 차집합 / 대칭차집합
-// union / intersetion / subtracting / ssymmetricDifferent
-var a: Set = [1,2]
-var b: Set = [2,3]
-var unionSet = a.union(b)
-print(unionSet)
+//###########################################################
+
+// 열거형
+
+enum weekday {
+    case monday
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    case sunday
+}
+// 열거형의 사용 : 위처럼 요일, 방향, 성별, 가위바위보 .... 등
+
+enum school {
+    case elementary
+    case middle
+    case high
+    case university
+}
+
+var School = school.elementary // 여기서 school은 타입 자체임.
+
+var today: weekday = .sunday
+
+if today == .sunday {
+    print("오늘은 일요일입니다.")
+}
+
+let setu: Set<Int> = [1,2,3]
+print(setu)
