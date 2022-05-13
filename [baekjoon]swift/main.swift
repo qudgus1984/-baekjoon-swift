@@ -993,33 +993,76 @@ for _ in 0 ..< t {
 //print(alpha) // []
 
 // 정렬
-var nums = [1,2,3,1,1,4,5,6,7,8,5,9]
-
-nums.sort() // 배열을 직접 정렬. 배열을 리턴하지 않음
-print(nums) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
-
-var num = [1,2,3,1,1,4,5,6,7,8,5,9]
-print(num.sorted()) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
-print(num) // [1, 2, 3, 1, 1, 4, 5, 6, 7, 8, 5, 9]
-
-// sorted() : 배열을 변환하고 다시 원래 배열을 리턴해줌.
-
-var numreverse = [1,2,3,1,1,4,5,6,7,8,5,9]
-numreverse.reverse()
-print(numreverse) // [9, 5, 8, 7, 6, 5, 4, 1, 1, 3, 2, 1]
-
-var data = [[1,2],[3,4]]
-print(data[0][1]) // data 배열 첫번째의 2번째 인덱스에 접근
-
-for i in nums {
-    print(i)
-} // 1,21,1,2,3,4,5,5,6,7,8,9
-
-// enumerate : 열거하다
-nums = [10, 11, 12, 13]
-for tuple in nums.enumerated() {
-    print(tuple) // (offset: 0, element: 10),(offset: 1, element: 11)
-                 // (offset: 2, element: 12),(offset: 3, element: 13)
-    print("\(tuple.offset)-\(tuple.element)")
-}
+//var nums = [1,2,3,1,1,4,5,6,7,8,5,9]
+//
+//nums.sort() // 배열을 직접 정렬. 배열을 리턴하지 않음
+//print(nums) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
+//
+//var num = [1,2,3,1,1,4,5,6,7,8,5,9]
+//print(num.sorted()) // [1, 1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 9]
+//print(num) // [1, 2, 3, 1, 1, 4, 5, 6, 7, 8, 5, 9]
+//
+//// sorted() : 배열을 변환하고 다시 원래 배열을 리턴해줌.
+//
+//var numreverse = [1,2,3,1,1,4,5,6,7,8,5,9]
+//numreverse.reverse()
+//print(numreverse) // [9, 5, 8, 7, 6, 5, 4, 1, 1, 3, 2, 1]
+//
+//var data = [[1,2],[3,4]]
+//print(data[0][1]) // data 배열 첫번째의 2번째 인덱스에 접근
+//
+//for i in nums {
+//    print(i)
+//} // 1,21,1,2,3,4,5,5,6,7,8,9
+//
+//// enumerate : 열거하다
+//nums = [10, 11, 12, 13]
+//for tuple in nums.enumerated() {
+//    print(tuple) // (offset: 0, element: 10),(offset: 1, element: 11)
+//                 // (offset: 2, element: 12),(offset: 3, element: 13)
+//    print("\(tuple.offset)-\(tuple.element)")
+//}
 // 즉, named 튜플 형태로 출력. 인덱스 번호와 값 둘다 출력
+
+// 딕셔너리
+
+var dic = ["A": "apple", "B": "banana", "C": "cap"]
+print(dic)
+
+if let tuple = dic.randomElement() {
+    print(tuple)
+}
+
+print(dic["B"]) // 옵셔널로 반환 => nil의 가능성이 있기 때문
+
+if let b = dic["B"] { // 따라서 위와 같이 옵셔널 바인딩을 해주어야 함.
+    print(b)
+}
+
+// 딕셔널는 값만 따로 검색하는 방법은 존재하지 않음.
+
+print(dic.keys) // 키 값만
+print(dic.values) // 벨류 값만
+print(dic.keys.sorted()) // 키 값을 배열로 변환시켜줌.
+print(dic.values.sorted()) // 벨류 값을 배열로 변환시켜줌.
+
+for key in dic.keys.sorted() { // 이렇게 키값을 배열로 사용해 반복문에서 사용할 수 있음.
+    print(key)
+}
+
+var words:[String: String]
+words = [:]
+words["A"] = "Apple" // 키가 없을땐 추가
+print(words)
+words["A"] = "Ace" // 키값이 존재한다면 변환
+print(words)
+
+words.updateValue("City", forKey: "C")
+print(words)
+// 삭제
+words.removeValue(forKey: "C")
+print(words)
+words["A"] = nil
+print(words)
+
+
