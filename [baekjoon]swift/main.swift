@@ -1111,36 +1111,59 @@ for _ in 0 ..< t {
 
 // 열거형
 
-enum weekday {
-    case monday
-    case tuesday
-    case wednesday
-    case thursday
-    case friday
-    case saturday
-    case sunday
+//enum weekday {
+//    case monday
+//    case tuesday
+//    case wednesday
+//    case thursday
+//    case friday
+//    case saturday
+//    case sunday
+//}
+//// 열거형의 사용 : 위처럼 요일, 방향, 성별, 가위바위보 .... 등
+//
+//enum school {
+//    case elementary
+//    case middle
+//    case high
+//    case university
+//}
+//
+//var School = school.elementary // 여기서 school은 타입 자체임.
+//
+//var today: weekday = .sunday
+//
+//if today == .sunday {
+//    print("오늘은 일요일입니다.")
+//}
+//
+//let setu: Set<Int> = [1,2,3]
+//print(setu)
+//
+//enum Optional {
+//    case some(Int)
+//    case none
+//}
+
+
+// 열거형의 활용
+enum LoginProvider: String {
+    case email
+    case facebook
+    case google
 }
-// 열거형의 사용 : 위처럼 요일, 방향, 성별, 가위바위보 .... 등
 
-enum school {
-    case elementary
-    case middle
-    case high
-    case university
-}
+let userLogin = LoginProvider.facebook
 
-var School = school.elementary // 여기서 school은 타입 자체임.
-
-var today: weekday = .sunday
-
-if today == .sunday {
-    print("오늘은 일요일입니다.")
-}
-
-let setu: Set<Int> = [1,2,3]
-print(setu)
-
-enum Optional {
-    case some(Int)
-    case none
+switch userLogin {
+case.email:
+    print("이메일 로그인")
+case.facebook:
+    print("페이스북 로그인")
+case.google:
+    print("구글 로그인")
+    
+    if LoginProvider.email == userLogin {
+        print("userLogin")
+    }
 }
