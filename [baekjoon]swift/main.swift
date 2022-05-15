@@ -1139,3 +1139,8 @@ if today == .sunday {
 
 let setu: Set<Int> = [1,2,3]
 print(setu)
+
+enum Optional {
+    case some(Int)
+    case none
+}
