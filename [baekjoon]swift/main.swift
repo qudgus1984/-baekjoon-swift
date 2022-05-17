@@ -1195,26 +1195,45 @@ for _ in 0 ..< t {
 //    }
 //}
 
-class Dog {
-    var name = "강아지"
+//class Dog {
+//    var name = "강아지"
+//    var weight = 0.0
+//
+//    func sit() {
+//        print("\(name)가 앉았습니다.")
+//    }
+//}
+//
+//var bori = Dog()
+//bori.name = "보리"
+//bori.weight = 15.0
+//print(bori.name)
+//print(bori.weight)
+//bori.sit()
+//
+//var choco = Dog()
+//choco.sit()
+//choco.name = "초코"
+//choco.weight = 7
+//print(choco.name)
+//print(choco.weight)
+//choco.sit()
+
+struct Bird {
+    var name = "새"
     var weight = 0.0
     
-    func sit() {
-        print("\(name)가 앉았습니다.")
+    func fly() {
+        print("\(name)가 날아갑니다.")
     }
 }
 
-var bori = Dog()
-bori.name = "보리"
-bori.weight = 15.0
-print(bori.name)
-print(bori.weight)
-bori.sit()
+var aBird = Bird()
+aBird.name = "딱따구리"
+print(aBird.name)
+aBird.fly()
 
-var choco = Dog()
-choco.sit()
-choco.name = "초코"
-choco.weight = 7
-print(choco.name)
-print(choco.weight)
-choco.sit()
+var bBird = Bird()
+bBird.name = "비둘기"
+print(bBird.name)
+bBird.fly()
