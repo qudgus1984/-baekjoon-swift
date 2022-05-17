@@ -1198,6 +1198,10 @@ for _ in 0 ..< t {
 class Dog {
     var name = "강아지"
     var weight = 0.0
+    
+    func sit() {
+        print("\(name)가 앉았습니다.")
+    }
 }
 
 var bori = Dog()
@@ -1205,9 +1209,12 @@ bori.name = "보리"
 bori.weight = 15.0
 print(bori.name)
 print(bori.weight)
+bori.sit()
 
 var choco = Dog()
+choco.sit()
 choco.name = "초코"
 choco.weight = 7
 print(choco.name)
 print(choco.weight)
+choco.sit()
