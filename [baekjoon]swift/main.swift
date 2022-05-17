@@ -1171,26 +1171,43 @@ for _ in 0 ..< t {
 // @nuknown 키워드 열거형에 있는 케이스들을 따로따로 다 switch문에서 다루어야만 경고창이 뜨지 않음.
 
 // 열거형의 활용
-enum LoginProvider: String {
-    case email
-    case facebook
-    case google
-    case kakaotalk
+//enum LoginProvider: String {
+//    case email
+//    case facebook
+//    case google
+//    case kakaotalk
+//}
+//
+//let userLogin = LoginProvider.facebook
+//
+//switch userLogin { // 경고창이 뜸 => unknown 코드 덕!
+//case.email:
+//    print("이메일 로그인")
+//case.facebook:
+//    print("페이스북 로그인")
+//case.google:
+//    print("구글 로그인")
+//@unknown default:
+//    print("그 외의 모든 경우")
+//
+//    if LoginProvider.email == userLogin {
+//        print("userLogin")
+//    }
+//}
+
+class Dog {
+    var name = "강아지"
+    var weight = 0.0
 }
 
-let userLogin = LoginProvider.facebook
+var bori = Dog()
+bori.name = "보리"
+bori.weight = 15.0
+print(bori.name)
+print(bori.weight)
 
-switch userLogin { // 경고창이 뜸 => unknown 코드 덕!
-case.email:
-    print("이메일 로그인")
-case.facebook:
-    print("페이스북 로그인")
-case.google:
-    print("구글 로그인")
-@unknown default:
-    print("그 외의 모든 경우")
-
-    if LoginProvider.email == userLogin {
-        print("userLogin")
-    }
-}
+var choco = Dog()
+choco.name = "초코"
+choco.weight = 7
+print(choco.name)
+print(choco.weight)
