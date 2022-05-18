@@ -1261,3 +1261,12 @@ var a2 = a // 값만 복사
 a.name = "강아지"
 print(a.name)
 print(a2.name) // 각각 다른 데이터
+
+let pclass = person()
+let astruct = animal()
+
+pclass.name = "사람1"
+print(pclass.name)
+
+// astruct.name = "동물1" // 오류
+// print(astruct.name)
