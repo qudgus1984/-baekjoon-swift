@@ -1238,35 +1238,51 @@ for _ in 0 ..< t {
 //print(bBird.name)
 //bBird.fly()
 
-class person {
-    var name = "사람"
+//class person {
+//    var name = "사람"
+//}
+//
+//struct animal {
+//    var name = "동물"
+//}
+//
+//var p = person()
+//p.name = "혜리"
+//print(p.name)
+//
+//var a = animal()
+//print(a.name)
+//
+//var p2 = p // 메모리주소가 동일함
+//p2.name = "수진"
+//print(p2.name)
+//
+//var a2 = a // 값만 복사
+//a.name = "강아지"
+//print(a.name)
+//print(a2.name) // 각각 다른 데이터
+//
+//let pclass = person()
+//let astruct = animal()
+//
+//pclass.name = "사람1"
+//print(pclass.name)
+//
+//// astruct.name = "동물1" // 오류
+//// print(astruct.name)
+
+// 이니셜라이저
+
+class Dog {
+    var name: String
+    var weight: Double
+    
+    init(n: String, w: Double) { // 생성자
+        name = n
+        weight = w
+    }
 }
 
-struct animal {
-    var name = "동물"
-}
-
-var p = person()
-p.name = "혜리"
-print(p.name)
-
-var a = animal()
-print(a.name)
-
-var p2 = p // 메모리주소가 동일함
-p2.name = "수진"
-print(p2.name)
-
-var a2 = a // 값만 복사
-a.name = "강아지"
-print(a.name)
-print(a2.name) // 각각 다른 데이터
-
-let pclass = person()
-let astruct = animal()
-
-pclass.name = "사람1"
-print(pclass.name)
-
-// astruct.name = "동물1" // 오류
-// print(astruct.name)
+var bori = Dog(n: "보리", w: 15.0)
+print(bori.name)
+print(bori.weight)
