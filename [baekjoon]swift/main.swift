@@ -1322,7 +1322,7 @@ for _ in 0 ..< t {
 
 // 구조체 / 클래스 속성
 
-// 저장속성 : 값이 저장되는 일반적인 속성을 저장속성이라고 함
+// 저장 속성(Stored Properties) : 값이 저장되는 일반적인 속성을 저장속성이라고 함
 
 struct Bird {
     var name: String = "새"   // 저장속성
@@ -1332,4 +1332,16 @@ struct Bird {
 var bird1 = Bird()
 print(bird1.name)
 print(bird1.weight)
+
+// 지연 저장 속성 (Lazy Stored Properties)
+
+struct Person {
+    var name: String = "Cody"
+    lazy var weight: Double = 0.0 // 지연 저장 속성
+    // 메모리 공간을 만들지 않음
+}
+
+var cody = Person()
+cody.weight = 65.0 // => 접근하는 순간 메모리 공간을 새로 만들어냄. 
+print(cody.weight)
 
