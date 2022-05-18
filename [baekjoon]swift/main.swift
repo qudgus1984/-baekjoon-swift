@@ -1288,34 +1288,48 @@ for _ in 0 ..< t {
 //print(bori.weight)
 
 // 도서관리 모델 설계
+//
+//class Book {
+//    var name: String
+//    var price: Int
+//    var company: String
+//    var author: String
+//    var pages: Int
+//
+//    init(name: String, price: Int, company: String, author: String, pages: Int) {
+//        self.name = name
+//        self.price = price
+//        self.company = company
+//        self.author = author
+//        self.pages = pages
+//    }
+//    func detail() {
+//        print("책 이름 :\(self.name)")
+//        print("가격 :\(self.price)")
+//        print("출판사 :\(self.company)")
+//        print("저자 :\(self.author)")
+//        print("페이지수 :\(self.pages)")
+//
+//    }
+//
+//}
+//
+//var book1 = Book(name: "스위프트", price: 30000, company: "애플", author: "잡스", pages: 300)
+//var book2 = Book(name: "정의란무엇인가", price: 18000, company: "정의", author: "다이아몬드 스튜어드", pages: 400)
+//
+//book1.detail()
+//book2.detail()
 
-class Book {
-    var name: String
-    var price: Int
-    var company: String
-    var author: String
-    var pages: Int
-    
-    init(name: String, price: Int, company: String, author: String, pages: Int) {
-        self.name = name
-        self.price = price
-        self.company = company
-        self.author = author
-        self.pages = pages
-    }
-    func detail() {
-        print("책 이름 :\(self.name)")
-        print("가격 :\(self.price)")
-        print("출판사 :\(self.company)")
-        print("저자 :\(self.author)")
-        print("페이지수 :\(self.pages)")
+// 구조체 / 클래스 속성
 
-    }
-    
+// 저장속성 : 값이 저장되는 일반적인 속성을 저장속성이라고 함
+
+struct Bird {
+    var name: String = "새"   // 저장속성
+    var weight: Double = 0.0  // 저장속성. 구조체나 클래스 상관 없이 둘다 가짐.
 }
 
-var book1 = Book(name: "스위프트", price: 30000, company: "애플", author: "잡스", pages: 300)
-var book2 = Book(name: "정의란무엇인가", price: 18000, company: "정의", author: "다이아몬드 스튜어드", pages: 400)
+var bird1 = Bird()
+print(bird1.name)
+print(bird1.weight)
 
-book1.detail()
-book2.detail()
