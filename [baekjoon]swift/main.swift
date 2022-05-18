@@ -1273,16 +1273,49 @@ for _ in 0 ..< t {
 
 // 이니셜라이저
 
-class Dog {
+//class Dog {
+//    var name: String
+//    var weight: Double
+//
+//    init(name: String, weight: Double) { // 생성자
+//        self.name = name // self : 인스턴스, 즉 실제 데이터를 의미
+//        self.weight = weight
+//    }
+//}
+//
+//var bori = Dog(name: "보리", weight: 15.0)
+//print(bori.name)
+//print(bori.weight)
+
+// 도서관리 모델 설계
+
+class Book {
     var name: String
-    var weight: Double
+    var price: Int
+    var company: String
+    var author: String
+    var pages: Int
     
-    init(n: String, w: Double) { // 생성자
-        name = n
-        weight = w
+    init(name: String, price: Int, company: String, author: String, pages: Int) {
+        self.name = name
+        self.price = price
+        self.company = company
+        self.author = author
+        self.pages = pages
     }
+    func detail() {
+        print("책 이름 :\(self.name)")
+        print("가격 :\(self.price)")
+        print("출판사 :\(self.company)")
+        print("저자 :\(self.author)")
+        print("페이지수 :\(self.pages)")
+
+    }
+    
 }
 
-var bori = Dog(n: "보리", w: 15.0)
-print(bori.name)
-print(bori.weight)
+var book1 = Book(name: "스위프트", price: 30000, company: "애플", author: "잡스", pages: 300)
+var book2 = Book(name: "정의란무엇인가", price: 18000, company: "정의", author: "다이아몬드 스튜어드", pages: 400)
+
+book1.detail()
+book2.detail()
