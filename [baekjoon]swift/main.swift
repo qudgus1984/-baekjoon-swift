@@ -1219,21 +1219,45 @@ for _ in 0 ..< t {
 //print(choco.weight)
 //choco.sit()
 
-struct Bird {
-    var name = "새"
-    var weight = 0.0
-    
-    func fly() {
-        print("\(name)가 날아갑니다.")
-    }
+//struct Bird {
+//    var name = "새"
+//    var weight = 0.0
+//
+//    func fly() {
+//        print("\(name)가 날아갑니다.")
+//    }
+//}
+//
+//var aBird = Bird()
+//aBird.name = "딱따구리"
+//print(aBird.name)
+//aBird.fly()
+//
+//var bBird = Bird()
+//bBird.name = "비둘기"
+//print(bBird.name)
+//bBird.fly()
+
+class person {
+    var name = "사람"
 }
 
-var aBird = Bird()
-aBird.name = "딱따구리"
-print(aBird.name)
-aBird.fly()
+struct animal {
+    var name = "동물"
+}
 
-var bBird = Bird()
-bBird.name = "비둘기"
-print(bBird.name)
-bBird.fly()
+var p = person()
+p.name = "혜리"
+print(p.name)
+
+var a = animal()
+print(a.name)
+
+var p2 = p // 메모리주소가 동일함
+p2.name = "수진"
+print(p2.name)
+
+var a2 = a // 값만 복사
+a.name = "강아지"
+print(a.name)
+print(a2.name) // 각각 다른 데이터
