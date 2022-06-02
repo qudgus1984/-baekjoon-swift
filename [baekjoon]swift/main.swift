@@ -1367,16 +1367,47 @@ for _ in 0 ..< t {
 
 // 9498
 
-var score = Int(readLine()!)!
+//var score = Int(readLine()!)!
+//
+//if score >= 90 {
+//    print("A")
+//} else if score >= 80 {
+//    print("B")
+//} else if score >= 70 {
+//    print("C")
+//} else if score >= 60 {
+//    print("D")
+//} else {
+//    print("F")
+//}
 
-if score >= 90 {
-    print("A")
-} else if score >= 80 {
-    print("B")
-} else if score >= 70 {
-    print("C")
-} else if score >= 60 {
-    print("D")
+// 2753
+
+//var year = Int(readLine()!)!
+//
+//if year % 4 == 0 {
+//    if year % 100 == 0 && year % 400 != 0 {
+//        print("0")
+//    } else {
+//        print("1")
+//    }
+//} else {
+//    print("0")
+//}
+
+// 14681
+
+var x = Int(readLine()!)!
+var y = Int(readLine()!)!
+
+if x > 0 && y > 0 {
+    print("1")
+} else if x < 0 && y > 0 {
+    print("2")
+} else if x < 0 && y < 0 {
+    print("3")
+} else if x > 0 && y < 0 {
+    print("4")
 } else {
-    print("F")
+    print("error")
 }
