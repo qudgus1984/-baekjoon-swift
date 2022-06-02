@@ -1324,24 +1324,59 @@ for _ in 0 ..< t {
 
 // 저장 속성(Stored Properties) : 값이 저장되는 일반적인 속성을 저장속성이라고 함
 
-struct Bird {
-    var name: String = "새"   // 저장속성
-    var weight: Double = 0.0  // 저장속성. 구조체나 클래스 상관 없이 둘다 가짐.
+//struct Bird {
+//    var name: String = "새"   // 저장속성
+//    var weight: Double = 0.0  // 저장속성. 구조체나 클래스 상관 없이 둘다 가짐.
+//}
+//
+//var bird1 = Bird()
+//print(bird1.name)
+//print(bird1.weight)
+//
+//// 지연 저장 속성 (Lazy Stored Properties)
+//
+//struct Person {
+//    var name: String = "Cody"
+//    lazy var weight: Double = 0.0 // 지연 저장 속성
+//    // 메모리 공간을 만들지 않음
+//}
+//
+//var cody = Person()
+//cody.weight = 65.0 // => 접근하는 순간 메모리 공간을 새로 만들어냄.
+//print(cody.weight)
+
+// =====================================
+
+
+
+// 백준 swift if 문부터 다시 풀기 1330
+
+// import Foundation
+//let input = readLine()!
+//let split = input.components(separatedBy: " ")
+//let A = Int(split[0])!
+//let B = Int(split[1])!
+//
+//if A > B {
+//    print(">")
+//} else if A < B {
+//    print("<")
+//} else if A == B {
+//    print("==")
+//}
+
+// 9498
+
+var score = Int(readLine()!)!
+
+if score >= 90 {
+    print("A")
+} else if score >= 80 {
+    print("B")
+} else if score >= 70 {
+    print("C")
+} else if score >= 60 {
+    print("D")
+} else {
+    print("F")
 }
-
-var bird1 = Bird()
-print(bird1.name)
-print(bird1.weight)
-
-// 지연 저장 속성 (Lazy Stored Properties)
-
-struct Person {
-    var name: String = "Cody"
-    lazy var weight: Double = 0.0 // 지연 저장 속성
-    // 메모리 공간을 만들지 않음
-}
-
-var cody = Person()
-cody.weight = 65.0 // => 접근하는 순간 메모리 공간을 새로 만들어냄. 
-print(cody.weight)
-
