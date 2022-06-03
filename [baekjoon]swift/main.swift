@@ -1413,19 +1413,46 @@ for _ in 0 ..< t {
 //}
 
 // 2884
+//import Foundation
+//let input = readLine()!
+//let split = input.components(separatedBy: " ")
+//var H = Int(split[0])!
+//var M = Int(split[1])!
+//
+//if M >= 45 {
+//    print(H,M-45)
+//} else {
+//    if H == 0 {
+//        H = 23
+//        print(H,M+15)
+//    } else {
+//        print(H-1,M+15)
+//    }
+//}
+
+// 2480
+
 import Foundation
 let input = readLine()!
 let split = input.components(separatedBy: " ")
-var H = Int(split[0])!
-var M = Int(split[1])!
+var dice1 = Int(split[0])!
+var dice2 = Int(split[1])!
+var dice3 = Int(split[2])!
 
-if M >= 45 {
-    print(H,M-45)
+if dice1 == dice2 && dice1 == dice3 {
+    print(dice1*1000+10000)
+} else if dice1 == dice2 {
+    print(dice1*100+1000)
+} else if dice1 == dice3 {
+    print(dice1*100+1000)
+} else if dice3 == dice2 {
+    print(dice2*100+1000)
 } else {
-    if H == 0 {
-        H = 23
-        print(H,M+15)
-    } else {
-        print(H-1,M+15)
+    if dice1 > dice2 && dice1 > dice3 {
+        print(dice1*100)
+    } else if dice2 > dice3 && dice2 > dice1 {
+        print(dice2*100)
+    } else if dice3 > dice1 && dice3 > dice2 {
+        print(dice3*100)
     }
 }
