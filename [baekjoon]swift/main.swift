@@ -1541,15 +1541,26 @@ for _ in 0 ..< t {
 //    star += "*"
 //}
 
-let N = Int(readLine()!)!
-for i in 1...N{
-    var total = ""
-    for j in 1...N {
-        if j <= N - i {
-            total += " "
-        } else{
-            total += "*"
-        }
-    }
-    print(total)
-}
+//let N = Int(readLine()!)!
+//for i in 1...N{
+//    var total = ""
+//    for j in 1...N {
+//        if j <= N - i {
+//            total += " "
+//        } else{
+//            total += "*"
+//        }
+//    }
+//    print(total)
+//}
+
+// 10871 - 못품
+import Foundation
+
+let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
+let N = arr[0]
+let X = arr[1]
+
+let A = readLine()!.split(separator: " ").map{Int(String($0))!}
+print(A.filter { $0 < X }.map{"\($0)"}.joined(separator:  " "))
+
