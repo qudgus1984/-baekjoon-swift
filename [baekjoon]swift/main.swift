@@ -1480,11 +1480,19 @@ for _ in 0 ..< t {
 
 // 8393
 
-var n = Int(readLine()!)!
-var total = 0
+//var n = Int(readLine()!)!
+//var total = 0
+//
+//for i in 1...n {
+//    total += i
+//}
+//
+//print(total)
 
-for i in 1...n {
-    total += i
+// 2741
+
+var N = Int(readLine()!)!
+
+for i in 1...N {
+    print(i)
 }
-
-print(total)
