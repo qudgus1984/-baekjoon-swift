@@ -1432,27 +1432,34 @@ for _ in 0 ..< t {
 
 // 2480
 
-import Foundation
-let input = readLine()!
-let split = input.components(separatedBy: " ")
-var dice1 = Int(split[0])!
-var dice2 = Int(split[1])!
-var dice3 = Int(split[2])!
+//import Foundation
+//let input = readLine()!
+//let split = input.components(separatedBy: " ")
+//var dice1 = Int(split[0])!
+//var dice2 = Int(split[1])!
+//var dice3 = Int(split[2])!
+//
+//if dice1 == dice2 && dice1 == dice3 {
+//    print(dice1*1000+10000)
+//} else if dice1 == dice2 {
+//    print(dice1*100+1000)
+//} else if dice1 == dice3 {
+//    print(dice1*100+1000)
+//} else if dice3 == dice2 {
+//    print(dice2*100+1000)
+//} else {
+//    if dice1 > dice2 && dice1 > dice3 {
+//        print(dice1*100)
+//    } else if dice2 > dice3 && dice2 > dice1 {
+//        print(dice2*100)
+//    } else if dice3 > dice1 && dice3 > dice2 {
+//        print(dice3*100)
+//    }
+//}
 
-if dice1 == dice2 && dice1 == dice3 {
-    print(dice1*1000+10000)
-} else if dice1 == dice2 {
-    print(dice1*100+1000)
-} else if dice1 == dice3 {
-    print(dice1*100+1000)
-} else if dice3 == dice2 {
-    print(dice2*100+1000)
-} else {
-    if dice1 > dice2 && dice1 > dice3 {
-        print(dice1*100)
-    } else if dice2 > dice3 && dice2 > dice1 {
-        print(dice2*100)
-    } else if dice3 > dice1 && dice3 > dice2 {
-        print(dice3*100)
-    }
+// 2739
+
+var N = Int(readLine()!)!
+for i in 1...9 {
+    print("\(N) * \(i) = \(N * i)")
 }
