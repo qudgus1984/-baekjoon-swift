@@ -1491,8 +1491,16 @@ for _ in 0 ..< t {
 
 // 2741
 
+//var N = Int(readLine()!)!
+//
+//for i in 1...N {
+//    print(i)
+//}
+
+// 2742
+
 var N = Int(readLine()!)!
 
 for i in 1...N {
-    print(i)
+    print(N + 1 - i)
 }
