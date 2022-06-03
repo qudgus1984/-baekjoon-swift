@@ -1554,13 +1554,26 @@ for _ in 0 ..< t {
 //    print(total)
 //}
 
-// 10871 - 못품
-import Foundation
+// 10871 - 해설보고 품
+//import Foundation
+//
+//let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
+//let N = arr[0]
+//let X = arr[1]
+//
+//let A = readLine()!.split(separator: " ").map{Int(String($0))!}
+//print(A.filter { $0 < X }.map{"\($0)"}.joined(separator:  " "))
 
-let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
-let N = arr[0]
-let X = arr[1]
+// 10952
 
-let A = readLine()!.split(separator: " ").map{Int(String($0))!}
-print(A.filter { $0 < X }.map{"\($0)"}.joined(separator:  " "))
 
+
+while true {
+    let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
+    let A = Int(arr[0])
+    let B = Int(arr[1])
+    if A+B == 0 {
+        break
+    }
+    print(A+B)
+}
