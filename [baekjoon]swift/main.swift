@@ -1534,9 +1534,22 @@ for _ in 0 ..< t {
 //    print("Case #\(i): \(A) + \(B) = \(total)")
 //}
 
-var N = Int(readLine()!)!
-var star = "*"
-for _ in 1...N {
-    print(star)
-    star += "*"
+//var N = Int(readLine()!)!
+//var star = "*"
+//for _ in 1...N {
+//    print(star)
+//    star += "*"
+//}
+
+let N = Int(readLine()!)!
+for i in 1...N{
+    var total = ""
+    for j in 1...N {
+        if j <= N - i {
+            total += " "
+        } else{
+            total += "*"
+        }
+    }
+    print(total)
 }
