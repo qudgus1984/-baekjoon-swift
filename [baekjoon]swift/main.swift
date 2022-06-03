@@ -1396,18 +1396,36 @@ for _ in 0 ..< t {
 //}
 
 // 14681
+//
+//var x = Int(readLine()!)!
+//var y = Int(readLine()!)!
+//
+//if x > 0 && y > 0 {
+//    print("1")
+//} else if x < 0 && y > 0 {
+//    print("2")
+//} else if x < 0 && y < 0 {
+//    print("3")
+//} else if x > 0 && y < 0 {
+//    print("4")
+//} else {
+//    print("error")
+//}
 
-var x = Int(readLine()!)!
-var y = Int(readLine()!)!
+// 2884
+import Foundation
+let input = readLine()!
+let split = input.components(separatedBy: " ")
+var H = Int(split[0])!
+var M = Int(split[1])!
 
-if x > 0 && y > 0 {
-    print("1")
-} else if x < 0 && y > 0 {
-    print("2")
-} else if x < 0 && y < 0 {
-    print("3")
-} else if x > 0 && y < 0 {
-    print("4")
+if M >= 45 {
+    print(H,M-45)
 } else {
-    print("error")
+    if H == 0 {
+        H = 23
+        print(H,M+15)
+    } else {
+        print(H-1,M+15)
+    }
 }
