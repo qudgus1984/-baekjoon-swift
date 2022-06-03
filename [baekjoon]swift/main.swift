@@ -1521,17 +1521,22 @@ for _ in 0 ..< t {
 //}
 
 // 11022
-import Foundation
+//import Foundation
+//
+//
+//var T = Int(readLine()!)!
+//for i in 1...T {
+//    let input = readLine()!
+//    let split = input.components(separatedBy: " ")
+//    let A = Int(split[0])!
+//    let B = Int(split[1])!
+//    let total = A+B
+//    print("Case #\(i): \(A) + \(B) = \(total)")
+//}
 
-
-var T = Int(readLine()!)!
-for i in 1...T {
-    let input = readLine()!
-    let split = input.components(separatedBy: " ")
-    let A = Int(split[0])!
-    let B = Int(split[1])!
-    let total = A+B
-    print("Case #\(i): \(A) + \(B) = \(total)")
+var N = Int(readLine()!)!
+var star = "*"
+for _ in 1...N {
+    print(star)
+    star += "*"
 }
-
-
