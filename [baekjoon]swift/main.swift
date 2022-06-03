@@ -1459,7 +1459,21 @@ for _ in 0 ..< t {
 
 // 2739
 
-var N = Int(readLine()!)!
-for i in 1...9 {
-    print("\(N) * \(i) = \(N * i)")
+//var N = Int(readLine()!)!
+//for i in 1...9 {
+//    print("\(N) * \(i) = \(N * i)")
+//}
+
+// 10950
+import Foundation
+
+
+var T = Int(readLine()!)!
+for _ in 1...T {
+    let input = readLine()!
+    let split = input.components(separatedBy: " ")
+    let A = Int(split[0])!
+    let B = Int(split[1])!
+    print(A+B)
 }
+
