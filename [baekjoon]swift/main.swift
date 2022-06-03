@@ -1465,15 +1465,26 @@ for _ in 0 ..< t {
 //}
 
 // 10950
-import Foundation
+//import Foundation
+//
+//
+//var T = Int(readLine()!)!
+//for _ in 1...T {
+//    let input = readLine()!
+//    let split = input.components(separatedBy: " ")
+//    let A = Int(split[0])!
+//    let B = Int(split[1])!
+//    print(A+B)
+//}
+//
 
+// 8393
 
-var T = Int(readLine()!)!
-for _ in 1...T {
-    let input = readLine()!
-    let split = input.components(separatedBy: " ")
-    let A = Int(split[0])!
-    let B = Int(split[1])!
-    print(A+B)
+var n = Int(readLine()!)!
+var total = 0
+
+for i in 1...n {
+    total += i
 }
 
+print(total)
