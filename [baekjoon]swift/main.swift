@@ -1505,6 +1505,22 @@ for _ in 0 ..< t {
 //    print(N + 1 - i)
 //}
 
+//
+
+//import Foundation
+//
+//
+//var T = Int(readLine()!)!
+//for i in 1...T {
+//    let input = readLine()!
+//    let split = input.components(separatedBy: " ")
+//    let A = Int(split[0])!
+//    let B = Int(split[1])!
+//    let total = A+B
+//    print("Case #\(i): \(total)")
+//}
+
+// 11022
 import Foundation
 
 
@@ -1515,6 +1531,7 @@ for i in 1...T {
     let A = Int(split[0])!
     let B = Int(split[1])!
     let total = A+B
-    print("Case #\(i): \(total)")
+    print("Case #\(i): \(A) + \(B) = \(total)")
 }
+
 
