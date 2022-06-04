@@ -1725,6 +1725,7 @@ for _ in 1...T {
         total += sNum[i]
     }
     var student =  Float(sNum[0])
+    var totalS = Float(total)
 
-    print("\(Float(total)/student)%")
+    print(String(format: "%.3f", totalS/student)+"%")
 }
