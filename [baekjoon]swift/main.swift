@@ -1567,13 +1567,111 @@ for _ in 0 ..< t {
 // 10952
 
 
+//
+//while true {
+//    let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
+//    let A = Int(arr[0])
+//    let B = Int(arr[1])
+//    if A+B == 0 {
+//        break
+//    }
+//    print(A+B)
+//}
 
-while true {
-    let arr = readLine()!.split(separator: " ").map{Int(String($0))!}
-    let A = Int(arr[0])
-    let B = Int(arr[1])
-    if A+B == 0 {
-        break
+// 10951 - 몰랐음. 무한루프 해결하는 문제임
+
+//while let input = readLine() {
+//    let arr = input.split(separator: " ").map{Int(String($0))!}
+//    let A = Int(arr[0])
+//    let B = Int(arr[1])
+//    print(A+B)
+//}
+
+// 1110 - 이건 이해는 했지만 repeat 구문 활용 없이 푸는건 어려움
+
+//var x = Int(readLine()!)!
+//var count = 0
+//var num = x
+//repeat {
+//    let firstNum = num / 10
+//    let leftNum = num % 10
+//    let sum = firstNum + leftNum
+//
+//    num = leftNum * 10 + sum % 10
+//    count += 1
+//
+//} while (x != num)
+//
+//print(count)
+
+// 10818
+//
+//var N = Int(readLine()!)!
+//var num = readLine()!.split(separator: " ").map{Int(String($0))!}
+//print("\(num.min()!) \(num.max()!)")
+//
+
+// 2562
+
+//var num: [Int] = []
+//for _ in 1...9 {
+//    num.append(Int(readLine()!)!)
+//}
+//let max = num.max()!
+//let index = num.firstIndex(of: max)! + 1
+//print(max)
+//print(index)
+
+// 2577
+
+var A = Int(readLine()!)!
+var B = Int(readLine()!)!
+var C = Int(readLine()!)!
+var n0 = 0
+var n1 = 0
+var n2 = 0
+var n3 = 0
+var n4 = 0
+var n5 = 0
+var n6 = 0
+var n7 = 0
+var n8 = 0
+var n9 = 0
+
+var arr = "\(A*B*C)".map{Character(String($0))}
+for i in 0...arr.count-1 {
+    
+    if arr[i] == "0" {
+        n0 += 1
+    } else if arr[i] == "1" {
+        n1 += 1
+    } else if arr[i] == "2" {
+        n2 += 1
+    } else if arr[i] == "3" {
+        n3 += 1
+    } else if arr[i] == "4" {
+        n4 += 1
+    } else if arr[i] == "5" {
+        n5 += 1
+    } else if arr[i] == "6" {
+        n6 += 1
+    } else if arr[i] == "7" {
+        n7 += 1
+    } else if arr[i] == "8" {
+        n8 += 1
+    } else if arr[i] == "9" {
+        n9 += 1
     }
-    print(A+B)
+
 }
+
+print(n0)
+print(n1)
+print(n2)
+print(n3)
+print(n4)
+print(n5)
+print(n6)
+print(n7)
+print(n8)
+print(n9)
