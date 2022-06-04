@@ -1701,18 +1701,30 @@ for _ in 0 ..< t {
 
 // 8958
 
+//var T = Int(readLine()!)!
+//for _ in 1...T {
+//    let OX = readLine()!.map{Character(String($0))}
+//    var total = 0
+//    var score = 0
+//    for i in OX {
+//        if i == "O" {
+//            score += 1
+//            total += score
+//        } else {
+//            score = 0
+//        }
+//    }
+//    print(total)
+//}
+
 var T = Int(readLine()!)!
 for _ in 1...T {
-    let OX = readLine()!.map{Character(String($0))}
     var total = 0
-    var score = 0
-    for i in OX {
-        if i == "O" {
-            score += 1
-            total += score
-        } else {
-            score = 0
-        }
+    let sNum = readLine()!.split(separator: " ").map{Int(String($0))!}
+    for i in 1...sNum[0] {
+        total += sNum[i]
     }
-    print(total)
+    var student =  Float(sNum[0])
+
+    print("\(Float(total)/student)%")
 }
