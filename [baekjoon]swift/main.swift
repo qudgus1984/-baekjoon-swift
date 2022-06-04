@@ -1689,12 +1689,20 @@ for _ in 0 ..< t {
 
 // 1546
 
-var total:Float = 0
-var N = Int(readLine()!)!
-var M = readLine()!.split(separator: " ").map{Float(String($0))!}
-var maxScore = M.max()!
-for i in 1...N {
-    total += M[i-1] / maxScore * 100
-}
+//var total:Float = 0
+//var N = Int(readLine()!)!
+//var M = readLine()!.split(separator: " ").map{Float(String($0))!}
+//var maxScore = M.max()!
+//for i in 1...N {
+//    total += M[i-1] / maxScore * 100
+//}
+//
+//print(total/Float(N))
 
-print(total/Float(N))
+// 8958
+
+var T = Int(readLine()!)!
+for i in 1...T {
+    var OX = readLine()!.map{Character(String($0))}
+    
+}
