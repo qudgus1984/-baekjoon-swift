@@ -1675,13 +1675,26 @@ for _ in 0 ..< t {
 //print(n7)
 //print(n8)
 //print(n9)
-var set: Set<Int> = Set<Int>()
-for i in 1...10 {
-    var num = 0
-    var x = Int(readLine()!)!
-    num = x % 42
-    set.insert(num)
+
+// 3052
+//var set: Set<Int> = Set<Int>()
+//for i in 1...10 {
+//    var num = 0
+//    var x = Int(readLine()!)!
+//    num = x % 42
+//    set.insert(num)
+//}
+//
+//print(set.count)
+
+// 1546
+
+var total:Float = 0
+var N = Int(readLine()!)!
+var M = readLine()!.split(separator: " ").map{Float(String($0))!}
+var maxScore = M.max()!
+for i in 1...N {
+    total += M[i-1] / maxScore * 100
 }
 
-print(set.count)
-
+print(total/Float(N))
