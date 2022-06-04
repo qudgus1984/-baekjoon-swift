@@ -1702,7 +1702,17 @@ for _ in 0 ..< t {
 // 8958
 
 var T = Int(readLine()!)!
-for i in 1...T {
-    var OX = readLine()!.map{Character(String($0))}
-    
+for _ in 1...T {
+    let OX = readLine()!.map{Character(String($0))}
+    var total = 0
+    var score = 0
+    for i in OX {
+        if i == "O" {
+            score += 1
+            total += score
+        } else {
+            score = 0
+        }
+    }
+    print(total)
 }
