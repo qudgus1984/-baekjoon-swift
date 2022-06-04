@@ -1623,55 +1623,65 @@ for _ in 0 ..< t {
 //print(index)
 
 // 2577
-
-var A = Int(readLine()!)!
-var B = Int(readLine()!)!
-var C = Int(readLine()!)!
-var n0 = 0
-var n1 = 0
-var n2 = 0
-var n3 = 0
-var n4 = 0
-var n5 = 0
-var n6 = 0
-var n7 = 0
-var n8 = 0
-var n9 = 0
-
-var arr = "\(A*B*C)".map{Character(String($0))}
-for i in 0...arr.count-1 {
-    
-    if arr[i] == "0" {
-        n0 += 1
-    } else if arr[i] == "1" {
-        n1 += 1
-    } else if arr[i] == "2" {
-        n2 += 1
-    } else if arr[i] == "3" {
-        n3 += 1
-    } else if arr[i] == "4" {
-        n4 += 1
-    } else if arr[i] == "5" {
-        n5 += 1
-    } else if arr[i] == "6" {
-        n6 += 1
-    } else if arr[i] == "7" {
-        n7 += 1
-    } else if arr[i] == "8" {
-        n8 += 1
-    } else if arr[i] == "9" {
-        n9 += 1
-    }
-
+//
+//var A = Int(readLine()!)!
+//var B = Int(readLine()!)!
+//var C = Int(readLine()!)!
+//var n0 = 0
+//var n1 = 0
+//var n2 = 0
+//var n3 = 0
+//var n4 = 0
+//var n5 = 0
+//var n6 = 0
+//var n7 = 0
+//var n8 = 0
+//var n9 = 0
+//
+//var arr = "\(A*B*C)".map{Character(String($0))}
+//for i in 0...arr.count-1 {
+//
+//    if arr[i] == "0" {
+//        n0 += 1
+//    } else if arr[i] == "1" {
+//        n1 += 1
+//    } else if arr[i] == "2" {
+//        n2 += 1
+//    } else if arr[i] == "3" {
+//        n3 += 1
+//    } else if arr[i] == "4" {
+//        n4 += 1
+//    } else if arr[i] == "5" {
+//        n5 += 1
+//    } else if arr[i] == "6" {
+//        n6 += 1
+//    } else if arr[i] == "7" {
+//        n7 += 1
+//    } else if arr[i] == "8" {
+//        n8 += 1
+//    } else if arr[i] == "9" {
+//        n9 += 1
+//    }
+//
+//}
+//
+//print(n0)
+//print(n1)
+//print(n2)
+//print(n3)
+//print(n4)
+//print(n5)
+//print(n6)
+//print(n7)
+//print(n8)
+//print(n9)
+var set: Set<Int> = Set<Int>()
+for i in 1...10 {
+    var num = 0
+    var x = Int(readLine()!)!
+    num = x % 42
+    set.insert(num)
 }
 
-print(n0)
-print(n1)
-print(n2)
-print(n3)
-print(n4)
-print(n5)
-print(n6)
-print(n7)
-print(n8)
-print(n9)
+print(set.count)
+
