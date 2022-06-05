@@ -1759,3 +1759,15 @@ for i in 1...10000 {
         print(i)
     }
 }
+
+// selfnum
+
+func selfnum (_ inputNum: Int) -> Int {
+    var sum = inputNum
+    var num = inputNum
+    while num != 0 {
+        sum += num % 10 // inputNum + 일의 자리 수
+        num /= 10
+    }
+    return sum
+}
