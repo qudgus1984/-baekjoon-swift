@@ -1716,16 +1716,46 @@ for _ in 0 ..< t {
 //    }
 //    print(total)
 //}
+//
+//var T = Int(readLine()!)!
+//for _ in 1...T {
+//    var total = 0
+//    let sNum = readLine()!.split(separator: " ").map{Int(String($0))!}
+//    for i in 1...sNum[0] {
+//        total += sNum[i]
+//    }
+//    var student =  Float(sNum[0])
+//    var totalS = Float(total)
+//
+//    print(String(format: "%.3f", totalS/student)+"%")
+//}
 
-var T = Int(readLine()!)!
-for _ in 1...T {
-    var total = 0
-    let sNum = readLine()!.split(separator: " ").map{Int(String($0))!}
-    for i in 1...sNum[0] {
-        total += sNum[i]
+
+// 4673
+
+//var arr: [String] = []
+//func d() {
+//    for i in 1...10000 {
+//
+//    }
+//}
+
+// 4673 셀프 넘버
+func generate (_ inputNum:Int) -> Int {
+    var sum = inputNum
+    var num = inputNum
+    while num != 0 {
+        sum += num % 10
+        num /= 10
     }
-    var student =  Float(sNum[0])
-    var totalS = Float(total)
-
-    print(String(format: "%.3f", totalS/student)+"%")
+    return sum
+}
+var result: Set<Int> = []
+for i in 1...10000 {
+    result.insert(generate(i))
+}
+for i in 1...10000 {
+    if !result.contains(i) {
+        print(i)
+    }
 }
