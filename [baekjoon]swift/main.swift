@@ -1740,25 +1740,25 @@ for _ in 0 ..< t {
 //    }
 //}
 
-// 4673 셀프 넘버
-func generate (_ inputNum:Int) -> Int {
-    var sum = inputNum
-    var num = inputNum
-    while num != 0 {
-        sum += num % 10
-        num /= 10
-    }
-    return sum
-}
-var result: Set<Int> = []
-for i in 1...10000 {
-    result.insert(generate(i))
-}
-for i in 1...10000 {
-    if !result.contains(i) {
-        print(i)
-    }
-}
+//// 4673 셀프 넘버
+//func generate (_ inputNum:Int) -> Int {
+//    var sum = inputNum
+//    var num = inputNum
+//    while num != 0 {
+//        sum += num % 10
+//        num /= 10
+//    }
+//    return sum
+//}
+//var result: Set<Int> = []
+//for i in 1...10000 {
+//    result.insert(generate(i))
+//}
+//for i in 1...10000 {
+//    if !result.contains(i) {
+//        print(i)
+//    }
+//}
 
 // selfnum
 
@@ -1770,4 +1770,15 @@ func selfnum (_ inputNum: Int) -> Int {
         num /= 10
     }
     return sum
+}
+
+var result: Set<Int> = []
+for i in 1...10000 {
+    result.insert(selfnum(i))
+} // 함수 사용해서 1~10000까지 숫자 대입
+
+for i in 1...10000 {
+    if !result.contains(i) {
+        print(i)
+    } // 만약 result 집합에 i가 포함되어있지 않으면
 }
