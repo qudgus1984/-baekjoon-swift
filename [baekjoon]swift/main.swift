@@ -1785,13 +1785,19 @@ for _ in 0 ..< t {
 
 import Foundation
 
-var x = Int(readLine()!)!
-var sosu: [Int] = []
+while true {
+    var x = Int(readLine()!)!
+    
+    var i = 2
+    while i < x {
+        if x % i == 0 {
+            i += 1
+            print("\(x)는 소수가 아닙니다.")
 
-for i in 2...x-1 {
-    if x % i == 0 {
-        
-    } else {
-        print("\(x)는 소수입니다.")
+        }
+        else if i == x {
+            print("\(x)는 소수입니다.")
+            break
+        }
     }
 }
