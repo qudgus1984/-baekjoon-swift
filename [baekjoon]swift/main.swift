@@ -1761,24 +1761,37 @@ for _ in 0 ..< t {
 //}
 
 // selfnum
+//
+//func selfnum (_ inputNum: Int) -> Int {
+//    var sum = inputNum
+//    var num = inputNum
+//    while num != 0 {
+//        sum += num % 10 // inputNum + 일의 자리 수
+//        num /= 10
+//    }
+//    return sum
+//}
+//
+//var result: Set<Int> = []
+//for i in 1...10000 {
+//    result.insert(selfnum(i))
+//} // 함수 사용해서 1~10000까지 숫자 대입
+//
+//for i in 1...10000 {
+//    if !result.contains(i) {
+//        print(i)
+//    } // 만약 result 집합에 i가 포함되어있지 않으면
+//}
 
-func selfnum (_ inputNum: Int) -> Int {
-    var sum = inputNum
-    var num = inputNum
-    while num != 0 {
-        sum += num % 10 // inputNum + 일의 자리 수
-        num /= 10
+import Foundation
+
+var x = Int(readLine()!)!
+var sosu: [Int] = []
+
+for i in 2...x-1 {
+    if x % i == 0 {
+        
+    } else {
+        print("\(x)는 소수입니다.")
     }
-    return sum
-}
-
-var result: Set<Int> = []
-for i in 1...10000 {
-    result.insert(selfnum(i))
-} // 함수 사용해서 1~10000까지 숫자 대입
-
-for i in 1...10000 {
-    if !result.contains(i) {
-        print(i)
-    } // 만약 result 집합에 i가 포함되어있지 않으면
 }
