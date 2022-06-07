@@ -1783,30 +1783,39 @@ for _ in 0 ..< t {
 //    } // 만약 result 집합에 i가 포함되어있지 않으면
 //}
 
-import Foundation
-
-func isPrime(num: Int) -> Bool {
-    if num < 4 {
-        return num == 1 ? false : true
-    }
-    for i in 2...Int(sqrt(Double(num))) {
-        if num % i == 0 { return false }
-    }
-    return true
-}
-
-print(isPrime(num: 7))
-
-func Prime(num: Int) -> Bool {
-    if num < 4 {
-        return num == 1 ? false : true
-    }
-    for i in 2...num-1 {
-        if num % i == 0 { return false }
-    }
-    return true
-}
-
-print(Prime(num: 10))
-
-
+//import Foundation
+//
+//func isPrime(num: Int) -> Bool {
+//    if num < 4 {
+//        return num == 1 ? false : true
+//    }
+//    for i in 2...Int(sqrt(Double(num))) {
+//        if num % i == 0 { return false }
+//    }
+//    return true
+//}
+//
+//print(isPrime(num: 7))
+//
+//func Prime(num: Int) -> Bool {
+//    if num < 4 {
+//        return num == 1 ? false : true
+//    }
+//    for i in 2...num-1 {
+//        if num % i == 0 { return false }
+//    }
+//    return true
+//}
+//
+//print(Prime(num: 10))
+//
+//
+let movieRuntime = 16433
+let hour = movieRuntime / (60 * 60)
+let minute = (movieRuntime % (60 * 60)) / 60
+let second = (movieRuntime % (60 * 60)) % 60
+print("영화의 러닝타임은 총\(movieRuntime)초로 \(hour)시간 \(minute)분 \(second)초 동안 재생됩니다.")
+print((120 + 33) * 60)
+var sample: [[Int]] = [[1, 2, 3, 4],[0, 1, 2, 2, 3, 4]] // 2차원 배열
+print(sample[0]) // [1,2,3,4] 출력!
+print(sample[1][1]) // 1번 인덱스의 1번 인덱스 출력! => 1 
