@@ -1785,19 +1785,28 @@ for _ in 0 ..< t {
 
 import Foundation
 
-while true {
-    var x = Int(readLine()!)!
-    
-    var i = 2
-    while i < x {
-        if x % i == 0 {
-            i += 1
-            print("\(x)는 소수가 아닙니다.")
-
-        }
-        else if i == x {
-            print("\(x)는 소수입니다.")
-            break
-        }
+func isPrime(num: Int) -> Bool {
+    if num < 4 {
+        return num == 1 ? false : true
     }
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 { return false }
+    }
+    return true
 }
+
+print(isPrime(num: 7))
+
+func Prime(num: Int) -> Bool {
+    if num < 4 {
+        return num == 1 ? false : true
+    }
+    for i in 2...num-1 {
+        if num % i == 0 { return false }
+    }
+    return true
+}
+
+print(Prime(num: 10))
+
+
