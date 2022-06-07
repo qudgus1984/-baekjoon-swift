@@ -1810,12 +1810,39 @@ for _ in 0 ..< t {
 //print(Prime(num: 10))
 //
 //
-let movieRuntime = 16433
-let hour = movieRuntime / (60 * 60)
-let minute = (movieRuntime % (60 * 60)) / 60
-let second = (movieRuntime % (60 * 60)) % 60
-print("영화의 러닝타임은 총\(movieRuntime)초로 \(hour)시간 \(minute)분 \(second)초 동안 재생됩니다.")
-print((120 + 33) * 60)
-var sample: [[Int]] = [[1, 2, 3, 4],[0, 1, 2, 2, 3, 4]] // 2차원 배열
-print(sample[0]) // [1,2,3,4] 출력!
-print(sample[1][1]) // 1번 인덱스의 1번 인덱스 출력! => 1 
+//let movieRuntime = 16433
+//let hour = movieRuntime / (60 * 60)
+//let minute = (movieRuntime % (60 * 60)) / 60
+//let second = (movieRuntime % (60 * 60)) % 60
+//print("영화의 러닝타임은 총\(movieRuntime)초로 \(hour)시간 \(minute)분 \(second)초 동안 재생됩니다.")
+//print((120 + 33) * 60)
+//var sample: [[Int]] = [[1, 2, 3, 4],[0, 1, 2, 2, 3, 4]] // 2차원 배열
+//print(sample[0]) // [1,2,3,4] 출력!
+//print(sample[1][1]) // 1번 인덱스의 1번 인덱스 출력! => 1
+
+//var two: Set = [2,2,2,2,4,6,8,10,12,14]
+//var three: Set = [3,6,9,12,18,21]
+//
+//let result = two.intersection(three)
+//print(result) // [6, 12] two집합과 three의 교집합을 출력
+//
+//print(two.union(three))
+//print(two.subtracting(three))
+//print(two.symmetricDifference(three))
+//
+//print(two.subtract(three))
+//print(two)
+
+let scoreArray = [100, 270, 240, 300, 90, 120]
+var bestArray:[Int] = []
+for score in scoreArray {
+    if score >= 200 {
+        bestArray.append(score)
+    }
+}
+print(bestArray)
+print("우수자는 총 \(bestArray.count) 명 입니다.")
+
+if bestArray.contains(300) {
+   print("만점자가 있습니다.")
+}
