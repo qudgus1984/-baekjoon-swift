@@ -1832,17 +1832,56 @@ for _ in 0 ..< t {
 //
 //print(two.subtract(three))
 //print(two)
+//
+//let scoreArray = [100, 270, 240, 300, 90, 120]
+//var bestArray:[Int] = []
+//for score in scoreArray {
+//    if score >= 200 {
+//        bestArray.append(score)
+//    }
+//}
+//print(bestArray)
+//print("우수자는 총 \(bestArray.count) 명 입니다.")
+//
+//if bestArray.contains(300) {
+//   print("만점자가 있습니다.")
+//}
+//
+//var movie: [String: [String]] = ["한국": ["신과 함께", "명량","괴물"],
+//"일본": ["나는 어제의 너와 만난다", "너의 이름은"]]
+//
+//for item in movie {
+//    print(item.key)
+//}
+//// 한국, 일본
+//
+//for item in movie {
+//    print("\(item.key)의 작품들") // 순서 x -> Dictionary이기 때문!
+//    print(item.value)
+//}
+//// ["신과 함께", "명량","괴물"], ["나는 어제의 너와 만난다", "너의 이름은"]
 
-let scoreArray = [100, 270, 240, 300, 90, 120]
-var bestArray:[Int] = []
-for score in scoreArray {
-    if score >= 200 {
-        bestArray.append(score)
+// 11047 그리디 알고리즘 동전0
+
+let line = readLine()!.split(separator: " ").map{Int(String($0))!}
+let N = line[0]
+var K = line[1]
+var coinArr = Array(repeating: 1000000, count: 10)
+
+for i in 0..<N {
+    let coinValue = Int(readLine()!)!
+    coinArr[i] = coinValue
+}
+
+var count = 0
+
+for i in (0..<N).reversed() {
+    let nowCount = K / coinArr[i]
+    K -= nowCount * coinArr[i]
+    count += nowCount
+    
+    if K == 0 {
+        break
     }
 }
-print(bestArray)
-print("우수자는 총 \(bestArray.count) 명 입니다.")
-
-if bestArray.contains(300) {
-   print("만점자가 있습니다.")
-}
+print(count)
