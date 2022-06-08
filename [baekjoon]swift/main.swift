@@ -1862,26 +1862,63 @@ for _ in 0 ..< t {
 //// ["신과 함께", "명량","괴물"], ["나는 어제의 너와 만난다", "너의 이름은"]
 
 // 11047 그리디 알고리즘 동전0
+//
+//let line = readLine()!.split(separator: " ").map{Int(String($0))!}
+//let N = line[0]
+//var K = line[1]
+//var coinArr = Array(repeating: 1000000, count: 10)
+//
+//for i in 0..<N {
+//    let coinValue = Int(readLine()!)!
+//    coinArr[i] = coinValue
+//}
+//var count = 0
+//
+//for i in (0..<N).reversed() {
+//    let newCoinCount = K / coinArr[i]
+//    K -= newCoinCount * coinArr[i]
+//    count += newCoinCount
+//
+//    if K == 0 {
+//        break
+//    }
+//}
+//print(count)
 
-let line = readLine()!.split(separator: " ").map{Int(String($0))!}
-let N = line[0]
-var K = line[1]
-var coinArr = Array(repeating: 1000000, count: 10)
+//var count = 0
+//
+//for i in (0..<N).reversed() {
+//    let nowCount = K / coinArr[i]
+//    K -= nowCount * coinArr[i]
+//    count += nowCount
+//
+//    if K == 0 {
+//        break
+//    }
+//}
+//print(count)
 
-for i in 0..<N {
-    let coinValue = Int(readLine()!)!
-    coinArr[i] = coinValue
-}
-
-var count = 0
-
-for i in (0..<N).reversed() {
-    let nowCount = K / coinArr[i]
-    K -= nowCount * coinArr[i]
-    count += nowCount
-    
-    if K == 0 {
-        break
+// 소수 찾기 알고리즘
+// 수를 입력받고, 그 수가 소수인지 아닌지 출력
+// 소수는 1 ~ sqrt(num)까지 나누어 떨어지면 안됌.
+var num = Int(readLine()!)!
+var sosu = 0
+if num <= 4 {
+    if num == 1 {
+        print("소수가 아닙니다.")
+    } else {
+        print("소수입니다.")
+    }
+} else {
+    for i in 2...Int(sqrt(Double(num))) {
+        if num % i == 0 {
+            break
+        } else {
+            sosu += 1
+        }
     }
 }
-print(count)
+
+if sosu >= 1 {
+    print("소수입니다.")
+}
