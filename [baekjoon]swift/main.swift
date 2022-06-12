@@ -1901,24 +1901,31 @@ for _ in 0 ..< t {
 // 소수 찾기 알고리즘
 // 수를 입력받고, 그 수가 소수인지 아닌지 출력
 // 소수는 1 ~ sqrt(num)까지 나누어 떨어지면 안됌.
-var num = Int(readLine()!)!
-var sosu = 0
-if num <= 4 {
-    if num == 1 {
-        print("소수가 아닙니다.")
-    } else {
-        print("소수입니다.")
-    }
-} else {
-    for i in 2...Int(sqrt(Double(num))) {
-        if num % i == 0 {
-            break
-        } else {
-            sosu += 1
-        }
-    }
-}
+//var num = Int(readLine()!)!
+//var sosu = 0
+//if num <= 4 {
+//    if num == 1 {
+//        print("소수가 아닙니다.")
+//    } else {
+//        print("소수입니다.")
+//    }
+//} else {
+//    for i in 2...Int(sqrt(Double(num))) {
+//        if num % i == 0 {
+//            break
+//        } else {
+//            sosu += 1
+//        }
+//    }
+//}
+//
+//if sosu >= 1 {
+//    print("소수입니다.")
+//}
+var lotto: [Int] = []
+for _ in 1...6 {
+    var lottoNum = Int.random(in: 1...45)
+    lotto.append(lottoNum)
+} // 로또 번호 개수 랜덤으로 1~45까지
 
-if sosu >= 1 {
-    print("소수입니다.")
-}
+print(lotto)
