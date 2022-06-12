@@ -1929,3 +1929,18 @@ for _ in 1...6 {
 } // 로또 번호 개수 랜덤으로 1~45까지
 
 print(lotto)
+
+var costomNum: [Int] = []
+for _ in 1...6 {
+    var costomChoiceNum = Int(readLine()!)!
+    costomNum.append(costomChoiceNum)
+} // 직접 고른 숫자
+
+var count = 0
+for i in lotto {
+    if costomNum.contains(i) {
+        count += 1
+    }
+}
+
+print(count)
