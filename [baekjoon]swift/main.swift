@@ -1928,8 +1928,6 @@ for _ in 1...6 {
     lotto.append(lottoNum)
 } // 로또 번호 개수 랜덤으로 1~45까지
 
-print(lotto)
-
 var costomNum: [Int] = []
 for _ in 1...6 {
     var costomChoiceNum = Int(readLine()!)!
@@ -1943,4 +1941,22 @@ for i in lotto {
     }
 }
 
-print(count)
+print(lotto)
+
+
+if count == 1 {
+    print("6등 : 1000원")
+} else if count == 2 {
+    print("5등 : 5000원")
+} else if count == 3 {
+    print("4등 : 만원")
+} else if count == 4 {
+    print("3등 : 100만원")
+} else if count == 5 {
+    print("2등 : 1000만원")
+} else if count == 6 {
+    print("1등 : 10억원")
+} else {
+    print("맞은게 없으므로 꽝")
+}
+
